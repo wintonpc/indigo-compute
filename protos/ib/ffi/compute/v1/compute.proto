@@ -1,0 +1,9 @@
+package ib.ffi.compute.v1;
+
+message FullSweepArgs {
+  required string arg = 1;
+}
+
+message FullSweepResult {
+  required string result = 1;
+}
