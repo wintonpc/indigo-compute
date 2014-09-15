@@ -2,7 +2,7 @@
 #define compute_h__
 
 #include <string>
-#include "protobuf/ib/ffi/compute/v1/compute.pb.h"
+#include "ib/ffi/compute/v1/compute.pb.h"
 
 ib::ffi::compute::v1::FullSweepResult
 fullSweep(const ib::ffi::compute::v1::FullSweepArgs& args);

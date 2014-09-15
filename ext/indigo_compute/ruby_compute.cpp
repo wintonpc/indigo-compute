@@ -1,7 +1,6 @@
 #include <ruby.h>
 #include "ruby_compute.h"
 #include "compute.h"
-#include "protobuf/ib/ffi/compute/v1/compute.pb.h"
 
 using namespace std;
 using namespace ib::ffi::compute::v1;
@@ -9,7 +8,7 @@ using namespace ib::ffi::compute::v1;
 VALUE Indigo = Qnil;
 VALUE Compute = Qnil;
 
-void Init_indigo_compute() {
+extern "C" void Init_indigo_compute() {
   Indigo = rb_define_module("Indigo");
   Compute = rb_define_module_under(Indigo, "Compute");
   rb_define_singleton_method(Compute, "full_sweep", (VALUE(*)(ANYARGS))ruby_fullSweep, 1);

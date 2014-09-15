@@ -1,5 +1,4 @@
 #include "compute.h"
-#include "protobuf/ib/ffi/compute/v1/compute.pb.h"
 
 using namespace std;
 using namespace ib::ffi::compute::v1;
