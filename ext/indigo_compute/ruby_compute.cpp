@@ -8,11 +8,13 @@ using namespace ib::ffi::compute::v1;
 
 VALUE Indigo = Qnil;
 VALUE Compute = Qnil;
+VALUE Native = Qnil;
 
 extern "C" void Init_indigo_compute() {
   Indigo = rb_define_module("Indigo");
   Compute = rb_define_module_under(Indigo, "Compute");
-  rb_define_singleton_method(Compute, "full_sweep_", (VALUE(*)(ANYARGS))ruby_fullSweep, 1);
+  Native = rb_define_module_under(Compute, "Native");
+  rb_define_singleton_method(Native, "full_sweep", (VALUE(*)(ANYARGS))ruby_fullSweep, 1);
 }
 
 VALUE ruby_fullSweep(VALUE self, VALUE args) {
