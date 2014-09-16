@@ -1,10 +1,10 @@
-## Generated from ib/ffi/compute/v1/compute.proto for ib.ffi.compute.v1
+## Generated from ib/ffi/compute/v3_3_0/compute.proto for ib.ffi.compute.v3_3_0
 require "beefcake"
 
 module Ib
   module Ffi
     module Compute
-      module V1
+      module V3_3_0
 
         class FullSweepArgs
           include Beefcake::Message

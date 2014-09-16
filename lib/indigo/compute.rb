@@ -1,8 +1,8 @@
 require 'indigo_compute'
 require_relative './compute.pb.rb'
 
-FullSweepArgs = Ib::Ffi::Compute::V1::FullSweepArgs
-FullSweepResult = Ib::Ffi::Compute::V1::FullSweepResult
+FullSweepArgs = Ib::Ffi::Compute::V3_3_0::FullSweepArgs
+FullSweepResult = Ib::Ffi::Compute::V3_3_0::FullSweepResult
 
 module Indigo
   module Compute

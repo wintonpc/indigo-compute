@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 using namespace std;
-using namespace ib::ffi::compute::v1;
+using namespace ib::ffi::compute::v3_3_0;
 
 VALUE Indigo = Qnil;
 VALUE Compute = Qnil;

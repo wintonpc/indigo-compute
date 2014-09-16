@@ -2,9 +2,9 @@
 #define compute_h__
 
 #include <string>
-#include "ib/ffi/compute/v1/compute.pb.h"
+#include "ib/ffi/compute/v3_3_0/compute.pb.h"
 
-ib::ffi::compute::v1::FullSweepResult
-fullSweep(const ib::ffi::compute::v1::FullSweepArgs& args);
+ib::ffi::compute::v3_3_0::FullSweepResult
+fullSweep(const ib::ffi::compute::v3_3_0::FullSweepArgs& args);
 
 #endif // compute_h__

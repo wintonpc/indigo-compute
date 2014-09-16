@@ -2,7 +2,7 @@
 #include "compute.h"
 
 using namespace std;
-using namespace ib::ffi::compute::v1;
+using namespace ib::ffi::compute::v3_3_0;
 
 FullSweepResult fullSweep(const FullSweepArgs& args) {
   FullSweepResult result;
