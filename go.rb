@@ -1,14 +1,8 @@
 require 'indigo_compute'
 require 'beefcake'
-require_relative './lib/compute.pb.rb'
-
-FullSweepArgs = Ib::Ffi::Compute::V1::FullSweepArgs
-FullSweepResult = Ib::Ffi::Compute::V1::FullSweepResult
+require_relative './lib/indigo/compute.rb'
 
 puts '-----'
-
-args = FullSweepArgs.new(arg: "hello")
-result = FullSweepResult.decode(Indigo::Compute.full_sweep(args.encode.to_s))
-puts "result: #{result.result}"
-
+result = Indigo::Compute.full_sweep(arg: 'hello')
+puts "result: #{result}"
 puts '-----'
