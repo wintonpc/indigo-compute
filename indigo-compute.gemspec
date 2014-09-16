@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'indigo-compute'
-  s.version       = '0.0.3'
+  s.version       = '0.0.4'
   s.summary       = 'Compute for indigo apps'
   s.author        = 'Peter Winton'
   s.email         = %w(info@indigobio.com)

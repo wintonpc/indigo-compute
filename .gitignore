@@ -1,4 +1,5 @@
 .idea
 ext/indigo_compute/compute.pb.cc
-lib
 tmp
+*.so
+*.gem

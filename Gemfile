@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rake-compiler'
+gem 'beefcake'
 
 group :test do
   gem 'rspec'

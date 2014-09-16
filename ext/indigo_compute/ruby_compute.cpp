@@ -1,6 +1,7 @@
 #include <ruby.h>
 #include "ruby_compute.h"
 #include "compute.h"
+#include <stdio.h>
 
 using namespace std;
 using namespace ib::ffi::compute::v1;
@@ -25,5 +26,5 @@ VALUE ruby_fullSweep(VALUE self, VALUE args) {
   string resultStr;
   pbResult.SerializeToString(&resultStr);
   const char *resultBuf = resultStr.c_str();
-  rb_str_new(resultBuf, resultStr.size());
+  return rb_str_new(resultBuf, resultStr.size());
 }
