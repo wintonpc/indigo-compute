@@ -7,4 +7,7 @@
 ib::ffi::compute::v3_3_0::FullSweepResult
 fullSweep(const ib::ffi::compute::v3_3_0::FullSweepArgs& args);
 
+ib::ffi::compute::v3_3_0::PerfTestResult
+perfTest(const ib::ffi::compute::v3_3_0::PerfTestArgs& args);
+
 #endif // compute_h__

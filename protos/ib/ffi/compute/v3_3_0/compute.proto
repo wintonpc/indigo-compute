@@ -7,3 +7,14 @@ message FullSweepArgs {
 message FullSweepResult {
   required string result = 1;
 }
+
+message PerfTestArgs {
+  optional bytes xBytes = 1;
+  optional bytes yBytes = 2;
+  repeated double xDoubles = 3 [packed=true];
+  repeated double yDoubles = 4 [packed=true];
+}
+
+message PerfTestResult {
+  required double result = 1;
+}

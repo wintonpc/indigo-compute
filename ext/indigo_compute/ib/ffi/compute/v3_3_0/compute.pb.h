@@ -37,6 +37,8 @@ void protobuf_ShutdownFile_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
 
 class FullSweepArgs;
 class FullSweepResult;
+class PerfTestArgs;
+class PerfTestResult;
 
 // ===================================================================
 
@@ -210,6 +212,216 @@ class FullSweepResult : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static FullSweepResult* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class PerfTestArgs : public ::google::protobuf::Message {
+ public:
+  PerfTestArgs();
+  virtual ~PerfTestArgs();
+  
+  PerfTestArgs(const PerfTestArgs& from);
+  
+  inline PerfTestArgs& operator=(const PerfTestArgs& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PerfTestArgs& default_instance();
+  
+  void Swap(PerfTestArgs* other);
+  
+  // implements Message ----------------------------------------------
+  
+  PerfTestArgs* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const PerfTestArgs& from);
+  void MergeFrom(const PerfTestArgs& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // optional bytes xBytes = 1;
+  inline bool has_xbytes() const;
+  inline void clear_xbytes();
+  static const int kXBytesFieldNumber = 1;
+  inline const ::std::string& xbytes() const;
+  inline void set_xbytes(const ::std::string& value);
+  inline void set_xbytes(const char* value);
+  inline void set_xbytes(const void* value, size_t size);
+  inline ::std::string* mutable_xbytes();
+  inline ::std::string* release_xbytes();
+  
+  // optional bytes yBytes = 2;
+  inline bool has_ybytes() const;
+  inline void clear_ybytes();
+  static const int kYBytesFieldNumber = 2;
+  inline const ::std::string& ybytes() const;
+  inline void set_ybytes(const ::std::string& value);
+  inline void set_ybytes(const char* value);
+  inline void set_ybytes(const void* value, size_t size);
+  inline ::std::string* mutable_ybytes();
+  inline ::std::string* release_ybytes();
+  
+  // repeated double xDoubles = 3 [packed = true];
+  inline int xdoubles_size() const;
+  inline void clear_xdoubles();
+  static const int kXDoublesFieldNumber = 3;
+  inline double xdoubles(int index) const;
+  inline void set_xdoubles(int index, double value);
+  inline void add_xdoubles(double value);
+  inline const ::google::protobuf::RepeatedField< double >&
+      xdoubles() const;
+  inline ::google::protobuf::RepeatedField< double >*
+      mutable_xdoubles();
+  
+  // repeated double yDoubles = 4 [packed = true];
+  inline int ydoubles_size() const;
+  inline void clear_ydoubles();
+  static const int kYDoublesFieldNumber = 4;
+  inline double ydoubles(int index) const;
+  inline void set_ydoubles(int index, double value);
+  inline void add_ydoubles(double value);
+  inline const ::google::protobuf::RepeatedField< double >&
+      ydoubles() const;
+  inline ::google::protobuf::RepeatedField< double >*
+      mutable_ydoubles();
+  
+  // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.PerfTestArgs)
+ private:
+  inline void set_has_xbytes();
+  inline void clear_has_xbytes();
+  inline void set_has_ybytes();
+  inline void clear_has_ybytes();
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  ::std::string* xbytes_;
+  ::std::string* ybytes_;
+  ::google::protobuf::RepeatedField< double > xdoubles_;
+  mutable int _xdoubles_cached_byte_size_;
+  ::google::protobuf::RepeatedField< double > ydoubles_;
+  mutable int _ydoubles_cached_byte_size_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  friend void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  friend void protobuf_ShutdownFile_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  
+  void InitAsDefaultInstance();
+  static PerfTestArgs* default_instance_;
+};
+// -------------------------------------------------------------------
+
+class PerfTestResult : public ::google::protobuf::Message {
+ public:
+  PerfTestResult();
+  virtual ~PerfTestResult();
+  
+  PerfTestResult(const PerfTestResult& from);
+  
+  inline PerfTestResult& operator=(const PerfTestResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+  
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+  
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PerfTestResult& default_instance();
+  
+  void Swap(PerfTestResult* other);
+  
+  // implements Message ----------------------------------------------
+  
+  PerfTestResult* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const PerfTestResult& from);
+  void MergeFrom(const PerfTestResult& from);
+  void Clear();
+  bool IsInitialized() const;
+  
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+  
+  ::google::protobuf::Metadata GetMetadata() const;
+  
+  // nested types ----------------------------------------------------
+  
+  // accessors -------------------------------------------------------
+  
+  // required double result = 1;
+  inline bool has_result() const;
+  inline void clear_result();
+  static const int kResultFieldNumber = 1;
+  inline double result() const;
+  inline void set_result(double value);
+  
+  // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.PerfTestResult)
+ private:
+  inline void set_has_result();
+  inline void clear_has_result();
+  
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+  
+  double result_;
+  
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+  
+  friend void  protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  friend void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  friend void protobuf_ShutdownFile_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
+  
+  void InitAsDefaultInstance();
+  static PerfTestResult* default_instance_;
+};
 // ===================================================================
 
 
@@ -335,6 +547,202 @@ inline ::std::string* FullSweepResult::release_result() {
     result_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
     return temp;
   }
+}
+
+// -------------------------------------------------------------------
+
+// PerfTestArgs
+
+// optional bytes xBytes = 1;
+inline bool PerfTestArgs::has_xbytes() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void PerfTestArgs::set_has_xbytes() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void PerfTestArgs::clear_has_xbytes() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void PerfTestArgs::clear_xbytes() {
+  if (xbytes_ != &::google::protobuf::internal::kEmptyString) {
+    xbytes_->clear();
+  }
+  clear_has_xbytes();
+}
+inline const ::std::string& PerfTestArgs::xbytes() const {
+  return *xbytes_;
+}
+inline void PerfTestArgs::set_xbytes(const ::std::string& value) {
+  set_has_xbytes();
+  if (xbytes_ == &::google::protobuf::internal::kEmptyString) {
+    xbytes_ = new ::std::string;
+  }
+  xbytes_->assign(value);
+}
+inline void PerfTestArgs::set_xbytes(const char* value) {
+  set_has_xbytes();
+  if (xbytes_ == &::google::protobuf::internal::kEmptyString) {
+    xbytes_ = new ::std::string;
+  }
+  xbytes_->assign(value);
+}
+inline void PerfTestArgs::set_xbytes(const void* value, size_t size) {
+  set_has_xbytes();
+  if (xbytes_ == &::google::protobuf::internal::kEmptyString) {
+    xbytes_ = new ::std::string;
+  }
+  xbytes_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* PerfTestArgs::mutable_xbytes() {
+  set_has_xbytes();
+  if (xbytes_ == &::google::protobuf::internal::kEmptyString) {
+    xbytes_ = new ::std::string;
+  }
+  return xbytes_;
+}
+inline ::std::string* PerfTestArgs::release_xbytes() {
+  clear_has_xbytes();
+  if (xbytes_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = xbytes_;
+    xbytes_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+
+// optional bytes yBytes = 2;
+inline bool PerfTestArgs::has_ybytes() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void PerfTestArgs::set_has_ybytes() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void PerfTestArgs::clear_has_ybytes() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void PerfTestArgs::clear_ybytes() {
+  if (ybytes_ != &::google::protobuf::internal::kEmptyString) {
+    ybytes_->clear();
+  }
+  clear_has_ybytes();
+}
+inline const ::std::string& PerfTestArgs::ybytes() const {
+  return *ybytes_;
+}
+inline void PerfTestArgs::set_ybytes(const ::std::string& value) {
+  set_has_ybytes();
+  if (ybytes_ == &::google::protobuf::internal::kEmptyString) {
+    ybytes_ = new ::std::string;
+  }
+  ybytes_->assign(value);
+}
+inline void PerfTestArgs::set_ybytes(const char* value) {
+  set_has_ybytes();
+  if (ybytes_ == &::google::protobuf::internal::kEmptyString) {
+    ybytes_ = new ::std::string;
+  }
+  ybytes_->assign(value);
+}
+inline void PerfTestArgs::set_ybytes(const void* value, size_t size) {
+  set_has_ybytes();
+  if (ybytes_ == &::google::protobuf::internal::kEmptyString) {
+    ybytes_ = new ::std::string;
+  }
+  ybytes_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* PerfTestArgs::mutable_ybytes() {
+  set_has_ybytes();
+  if (ybytes_ == &::google::protobuf::internal::kEmptyString) {
+    ybytes_ = new ::std::string;
+  }
+  return ybytes_;
+}
+inline ::std::string* PerfTestArgs::release_ybytes() {
+  clear_has_ybytes();
+  if (ybytes_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = ybytes_;
+    ybytes_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+
+// repeated double xDoubles = 3 [packed = true];
+inline int PerfTestArgs::xdoubles_size() const {
+  return xdoubles_.size();
+}
+inline void PerfTestArgs::clear_xdoubles() {
+  xdoubles_.Clear();
+}
+inline double PerfTestArgs::xdoubles(int index) const {
+  return xdoubles_.Get(index);
+}
+inline void PerfTestArgs::set_xdoubles(int index, double value) {
+  xdoubles_.Set(index, value);
+}
+inline void PerfTestArgs::add_xdoubles(double value) {
+  xdoubles_.Add(value);
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PerfTestArgs::xdoubles() const {
+  return xdoubles_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PerfTestArgs::mutable_xdoubles() {
+  return &xdoubles_;
+}
+
+// repeated double yDoubles = 4 [packed = true];
+inline int PerfTestArgs::ydoubles_size() const {
+  return ydoubles_.size();
+}
+inline void PerfTestArgs::clear_ydoubles() {
+  ydoubles_.Clear();
+}
+inline double PerfTestArgs::ydoubles(int index) const {
+  return ydoubles_.Get(index);
+}
+inline void PerfTestArgs::set_ydoubles(int index, double value) {
+  ydoubles_.Set(index, value);
+}
+inline void PerfTestArgs::add_ydoubles(double value) {
+  ydoubles_.Add(value);
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PerfTestArgs::ydoubles() const {
+  return ydoubles_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PerfTestArgs::mutable_ydoubles() {
+  return &ydoubles_;
+}
+
+// -------------------------------------------------------------------
+
+// PerfTestResult
+
+// required double result = 1;
+inline bool PerfTestResult::has_result() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void PerfTestResult::set_has_result() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void PerfTestResult::clear_has_result() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void PerfTestResult::clear_result() {
+  result_ = 0;
+  clear_has_result();
+}
+inline double PerfTestResult::result() const {
+  return result_;
+}
+inline void PerfTestResult::set_result(double value) {
+  set_has_result();
+  result_ = value;
 }
 
 

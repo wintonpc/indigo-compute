@@ -9,3 +9,9 @@ FullSweepResult fullSweep(const FullSweepArgs& args) {
   result.set_result("you said: " + args.arg());
   return result;
 }
+
+PerfTestResult perfTest(const PerfTestArgs& args) {
+  PerfTestResult result;
+  result.set_result(1);
+  return result;
+}

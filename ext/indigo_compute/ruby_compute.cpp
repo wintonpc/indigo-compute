@@ -6,27 +6,31 @@
 using namespace std;
 using namespace ib::ffi::compute::v3_3_0;
 
-VALUE Indigo = Qnil;
-VALUE Compute = Qnil;
-VALUE Native = Qnil;
+#define INSTALL(name)                                                   \
+  rb_define_singleton_method(Native, #name, (VALUE(*)(ANYARGS))name, 1)
 
-extern "C" void Init_indigo_compute() {
-  Indigo = rb_define_module("Indigo");
-  Compute = rb_define_module_under(Indigo, "Compute");
-  Native = rb_define_module_under(Compute, "Native");
-  rb_define_singleton_method(Native, "full_sweep", (VALUE(*)(ANYARGS))ruby_fullSweep, 1);
-}
+#define DEFINE(name, impl, argType)                             \
+  VALUE name(VALUE self, VALUE args) {                          \
+    return encode(impl(decode<argType>(args)));                 \
+  }
+  
 
-VALUE ruby_fullSweep(VALUE self, VALUE args) {
-  char *argsBuf = RSTRING_PTR(args);
-  string argsStr(argsBuf, RSTRING_LEN(args));
-  FullSweepArgs pbArgs;
-  pbArgs.ParseFromString(argsStr);
+namespace ruby {
 
-  FullSweepResult pbResult = fullSweep(pbArgs);
+  VALUE Indigo = Qnil;
+  VALUE Compute = Qnil;
+  VALUE Native = Qnil;
 
-  string resultStr;
-  pbResult.SerializeToString(&resultStr);
-  const char *resultBuf = resultStr.c_str();
-  return rb_str_new(resultBuf, resultStr.size());
+  extern "C" void Init_indigo_compute() {
+    Indigo = rb_define_module("Indigo");
+    Compute = rb_define_module_under(Indigo, "Compute");
+    Native = rb_define_module_under(Compute, "Native");
+    INSTALL(full_sweep);
+  }
+
+  DEFINE(full_sweep, ::fullSweep, FullSweepArgs);
+
+  VALUE perf_test(VALUE self, VALUE args) {
+    return Qnil;
+  }
 }
