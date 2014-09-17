@@ -1,36 +1,18 @@
-#include <ruby.h>
 #include "ruby_compute.h"
-#include "compute.h"
-#include <stdio.h>
 
-using namespace std;
-using namespace ib::ffi::compute::v3_3_0;
+VALUE Indigo = Qnil;
+VALUE Compute = Qnil;
+VALUE Native = Qnil;
 
-#define INSTALL(name)                                                   \
-  rb_define_singleton_method(Native, #name, (VALUE(*)(ANYARGS))name, 1)
+WRAP(fullSweep, ib::ffi::compute::v3_3_0::FullSweepArgs);
 
-#define DEFINE(name, impl, argType)                             \
-  VALUE name(VALUE self, VALUE args) {                          \
-    return encode(impl(decode<argType>(args)));                 \
-  }
-  
+extern "C" void Init_indigo_compute() {
+  Indigo = rb_define_module("Indigo");
+  Compute = rb_define_module_under(Indigo, "Compute");
+  Native = rb_define_module_under(Compute, "Native");
+  INSTALL(Native, "full_sweep", fullSweep);
+}
 
-namespace ruby {
-
-  VALUE Indigo = Qnil;
-  VALUE Compute = Qnil;
-  VALUE Native = Qnil;
-
-  extern "C" void Init_indigo_compute() {
-    Indigo = rb_define_module("Indigo");
-    Compute = rb_define_module_under(Indigo, "Compute");
-    Native = rb_define_module_under(Compute, "Native");
-    INSTALL(full_sweep);
-  }
-
-  DEFINE(full_sweep, ::fullSweep, FullSweepArgs);
-
-  VALUE perf_test(VALUE self, VALUE args) {
-    return Qnil;
-  }
+VALUE perf_test(VALUE self, VALUE args) {
+  return Qnil;
 }
