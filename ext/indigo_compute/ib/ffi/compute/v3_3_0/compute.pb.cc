@@ -26,12 +26,24 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* FullSweepResult_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   FullSweepResult_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PerfTestArgs_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* AssayConfiguration_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  PerfTestArgs_reflection_ = NULL;
-const ::google::protobuf::Descriptor* PerfTestResult_descriptor_ = NULL;
+  AssayConfiguration_reflection_ = NULL;
+const ::google::protobuf::Descriptor* QuantitatedSample_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  PerfTestResult_reflection_ = NULL;
+  QuantitatedSample_reflection_ = NULL;
+const ::google::protobuf::Descriptor* QuantitatedCompound_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  QuantitatedCompound_reflection_ = NULL;
+const ::google::protobuf::Descriptor* QuantitatedChromatogram_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  QuantitatedChromatogram_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ConvertedSample_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ConvertedSample_reflection_ = NULL;
+const ::google::protobuf::Descriptor* ConvertedChromatogram_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  ConvertedChromatogram_reflection_ = NULL;
 
 }  // namespace
 
@@ -43,8 +55,9 @@ void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
       "ib/ffi/compute/v3_3_0/compute.proto");
   GOOGLE_CHECK(file != NULL);
   FullSweepArgs_descriptor_ = file->message_type(0);
-  static const int FullSweepArgs_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FullSweepArgs, arg_),
+  static const int FullSweepArgs_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FullSweepArgs, assayconfig_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FullSweepArgs, convertedsamples_),
   };
   FullSweepArgs_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -59,7 +72,7 @@ void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
       sizeof(FullSweepArgs));
   FullSweepResult_descriptor_ = file->message_type(1);
   static const int FullSweepResult_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FullSweepResult, result_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FullSweepResult, quantitatedsamples_),
   };
   FullSweepResult_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -72,39 +85,109 @@ void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(FullSweepResult));
-  PerfTestArgs_descriptor_ = file->message_type(2);
-  static const int PerfTestArgs_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, xbytes_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, ybytes_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, xdoubles_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, ydoubles_),
+  AssayConfiguration_descriptor_ = file->message_type(2);
+  static const int AssayConfiguration_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AssayConfiguration, name_),
   };
-  PerfTestArgs_reflection_ =
+  AssayConfiguration_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      PerfTestArgs_descriptor_,
-      PerfTestArgs::default_instance_,
-      PerfTestArgs_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestArgs, _unknown_fields_),
+      AssayConfiguration_descriptor_,
+      AssayConfiguration::default_instance_,
+      AssayConfiguration_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AssayConfiguration, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AssayConfiguration, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(PerfTestArgs));
-  PerfTestResult_descriptor_ = file->message_type(3);
-  static const int PerfTestResult_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestResult, result_),
+      sizeof(AssayConfiguration));
+  QuantitatedSample_descriptor_ = file->message_type(3);
+  static const int QuantitatedSample_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, unique_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, quantitatedcompounds_),
   };
-  PerfTestResult_reflection_ =
+  QuantitatedSample_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      PerfTestResult_descriptor_,
-      PerfTestResult::default_instance_,
-      PerfTestResult_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestResult, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PerfTestResult, _unknown_fields_),
+      QuantitatedSample_descriptor_,
+      QuantitatedSample::default_instance_,
+      QuantitatedSample_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedSample, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(PerfTestResult));
+      sizeof(QuantitatedSample));
+  QuantitatedCompound_descriptor_ = file->message_type(4);
+  static const int QuantitatedCompound_offsets_[3] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedCompound, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedCompound, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedCompound, quantitatedchromatograms_),
+  };
+  QuantitatedCompound_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      QuantitatedCompound_descriptor_,
+      QuantitatedCompound::default_instance_,
+      QuantitatedCompound_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedCompound, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedCompound, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(QuantitatedCompound));
+  QuantitatedChromatogram_descriptor_ = file->message_type(5);
+  static const int QuantitatedChromatogram_offsets_[2] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedChromatogram, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedChromatogram, name_),
+  };
+  QuantitatedChromatogram_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      QuantitatedChromatogram_descriptor_,
+      QuantitatedChromatogram::default_instance_,
+      QuantitatedChromatogram_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedChromatogram, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(QuantitatedChromatogram, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(QuantitatedChromatogram));
+  ConvertedSample_descriptor_ = file->message_type(6);
+  static const int ConvertedSample_offsets_[4] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, unique_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, convertedchromatograms_),
+  };
+  ConvertedSample_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ConvertedSample_descriptor_,
+      ConvertedSample::default_instance_,
+      ConvertedSample_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ConvertedSample));
+  ConvertedChromatogram_descriptor_ = file->message_type(7);
+  static const int ConvertedChromatogram_offsets_[5] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, precursor_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, product_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, polarity_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, collisionenergy_),
+  };
+  ConvertedChromatogram_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      ConvertedChromatogram_descriptor_,
+      ConvertedChromatogram::default_instance_,
+      ConvertedChromatogram_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedChromatogram, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(ConvertedChromatogram));
 }
 
 namespace {
@@ -122,9 +205,17 @@ void protobuf_RegisterTypes(const ::std::string&) {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     FullSweepResult_descriptor_, &FullSweepResult::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    PerfTestArgs_descriptor_, &PerfTestArgs::default_instance());
+    AssayConfiguration_descriptor_, &AssayConfiguration::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    PerfTestResult_descriptor_, &PerfTestResult::default_instance());
+    QuantitatedSample_descriptor_, &QuantitatedSample::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    QuantitatedCompound_descriptor_, &QuantitatedCompound::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    QuantitatedChromatogram_descriptor_, &QuantitatedChromatogram::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ConvertedSample_descriptor_, &ConvertedSample::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    ConvertedChromatogram_descriptor_, &ConvertedChromatogram::default_instance());
 }
 
 }  // namespace
@@ -134,10 +225,18 @@ void protobuf_ShutdownFile_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
   delete FullSweepArgs_reflection_;
   delete FullSweepResult::default_instance_;
   delete FullSweepResult_reflection_;
-  delete PerfTestArgs::default_instance_;
-  delete PerfTestArgs_reflection_;
-  delete PerfTestResult::default_instance_;
-  delete PerfTestResult_reflection_;
+  delete AssayConfiguration::default_instance_;
+  delete AssayConfiguration_reflection_;
+  delete QuantitatedSample::default_instance_;
+  delete QuantitatedSample_reflection_;
+  delete QuantitatedCompound::default_instance_;
+  delete QuantitatedCompound_reflection_;
+  delete QuantitatedChromatogram::default_instance_;
+  delete QuantitatedChromatogram_reflection_;
+  delete ConvertedSample::default_instance_;
+  delete ConvertedSample_reflection_;
+  delete ConvertedChromatogram::default_instance_;
+  delete ConvertedChromatogram_reflection_;
 }
 
 void protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
@@ -148,22 +247,46 @@ void protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n#ib/ffi/compute/v3_3_0/compute.proto\022\025i"
-    "b.ffi.compute.v3_3_0\"\034\n\rFullSweepArgs\022\013\n"
-    "\003arg\030\001 \002(\t\"!\n\017FullSweepResult\022\016\n\006result\030"
-    "\001 \002(\t\"Z\n\014PerfTestArgs\022\016\n\006xBytes\030\001 \001(\014\022\016\n"
-    "\006yBytes\030\002 \001(\014\022\024\n\010xDoubles\030\003 \003(\001B\002\020\001\022\024\n\010y"
-    "Doubles\030\004 \003(\001B\002\020\001\" \n\016PerfTestResult\022\016\n\006r"
-    "esult\030\001 \002(\001", 251);
+    "b.ffi.compute.v3_3_0\"\221\001\n\rFullSweepArgs\022>"
+    "\n\013assayConfig\030\001 \002(\0132).ib.ffi.compute.v3_"
+    "3_0.AssayConfiguration\022@\n\020convertedSampl"
+    "es\030\002 \003(\0132&.ib.ffi.compute.v3_3_0.Convert"
+    "edSample\"W\n\017FullSweepResult\022D\n\022quantitat"
+    "edSamples\030\001 \003(\0132(.ib.ffi.compute.v3_3_0."
+    "QuantitatedSample\"\"\n\022AssayConfiguration\022"
+    "\014\n\004name\030\001 \002(\t\"\212\001\n\021QuantitatedSample\022\n\n\002i"
+    "d\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\021\n\tunique_id\030\003 \002(\t"
+    "\022H\n\024quantitatedCompounds\030\004 \003(\0132*.ib.ffi."
+    "compute.v3_3_0.QuantitatedCompound\"\201\001\n\023Q"
+    "uantitatedCompound\022\n\n\002id\030\001 \002(\t\022\014\n\004name\030\002"
+    " \002(\t\022P\n\030quantitatedChromatograms\030\003 \003(\0132."
+    ".ib.ffi.compute.v3_3_0.QuantitatedChroma"
+    "togram\"3\n\027QuantitatedChromatogram\022\n\n\002id\030"
+    "\001 \002(\t\022\014\n\004name\030\002 \002(\t\"\214\001\n\017ConvertedSample\022"
+    "\n\n\002id\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\021\n\tunique_id\030\003"
+    " \002(\t\022L\n\026convertedChromatograms\030\004 \003(\0132,.i"
+    "b.ffi.compute.v3_3_0.ConvertedChromatogr"
+    "am\"r\n\025ConvertedChromatogram\022\n\n\002id\030\001 \002(\t\022"
+    "\021\n\tprecursor\030\002 \001(\001\022\017\n\007product\030\003 \002(\001\022\020\n\010p"
+    "olarity\030\004 \002(\t\022\027\n\017collisionEnergy\030\005 \001(\001", 918);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ib/ffi/compute/v3_3_0/compute.proto", &protobuf_RegisterTypes);
   FullSweepArgs::default_instance_ = new FullSweepArgs();
   FullSweepResult::default_instance_ = new FullSweepResult();
-  PerfTestArgs::default_instance_ = new PerfTestArgs();
-  PerfTestResult::default_instance_ = new PerfTestResult();
+  AssayConfiguration::default_instance_ = new AssayConfiguration();
+  QuantitatedSample::default_instance_ = new QuantitatedSample();
+  QuantitatedCompound::default_instance_ = new QuantitatedCompound();
+  QuantitatedChromatogram::default_instance_ = new QuantitatedChromatogram();
+  ConvertedSample::default_instance_ = new ConvertedSample();
+  ConvertedChromatogram::default_instance_ = new ConvertedChromatogram();
   FullSweepArgs::default_instance_->InitAsDefaultInstance();
   FullSweepResult::default_instance_->InitAsDefaultInstance();
-  PerfTestArgs::default_instance_->InitAsDefaultInstance();
-  PerfTestResult::default_instance_->InitAsDefaultInstance();
+  AssayConfiguration::default_instance_->InitAsDefaultInstance();
+  QuantitatedSample::default_instance_->InitAsDefaultInstance();
+  QuantitatedCompound::default_instance_->InitAsDefaultInstance();
+  QuantitatedChromatogram::default_instance_->InitAsDefaultInstance();
+  ConvertedSample::default_instance_->InitAsDefaultInstance();
+  ConvertedChromatogram::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto);
 }
 
@@ -178,7 +301,8 @@ struct StaticDescriptorInitializer_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2ep
 // ===================================================================
 
 #ifndef _MSC_VER
-const int FullSweepArgs::kArgFieldNumber;
+const int FullSweepArgs::kAssayConfigFieldNumber;
+const int FullSweepArgs::kConvertedSamplesFieldNumber;
 #endif  // !_MSC_VER
 
 FullSweepArgs::FullSweepArgs()
@@ -187,6 +311,7 @@ FullSweepArgs::FullSweepArgs()
 }
 
 void FullSweepArgs::InitAsDefaultInstance() {
+  assayconfig_ = const_cast< ::ib::ffi::compute::v3_3_0::AssayConfiguration*>(&::ib::ffi::compute::v3_3_0::AssayConfiguration::default_instance());
 }
 
 FullSweepArgs::FullSweepArgs(const FullSweepArgs& from)
@@ -197,7 +322,7 @@ FullSweepArgs::FullSweepArgs(const FullSweepArgs& from)
 
 void FullSweepArgs::SharedCtor() {
   _cached_size_ = 0;
-  arg_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  assayconfig_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -206,10 +331,8 @@ FullSweepArgs::~FullSweepArgs() {
 }
 
 void FullSweepArgs::SharedDtor() {
-  if (arg_ != &::google::protobuf::internal::kEmptyString) {
-    delete arg_;
-  }
   if (this != default_instance_) {
+    delete assayconfig_;
   }
 }
 
@@ -235,12 +358,11 @@ FullSweepArgs* FullSweepArgs::New() const {
 
 void FullSweepArgs::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (has_arg()) {
-      if (arg_ != &::google::protobuf::internal::kEmptyString) {
-        arg_->clear();
-      }
+    if (has_assayconfig()) {
+      if (assayconfig_ != NULL) assayconfig_->::ib::ffi::compute::v3_3_0::AssayConfiguration::Clear();
     }
   }
+  convertedsamples_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -251,18 +373,30 @@ bool FullSweepArgs::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string arg = 1;
+      // required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_arg()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->arg().data(), this->arg().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_assayconfig()));
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(18)) goto parse_convertedSamples;
+        break;
+      }
+      
+      // repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_convertedSamples:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_convertedsamples()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_convertedSamples;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -285,13 +419,16 @@ bool FullSweepArgs::MergePartialFromCodedStream(
 
 void FullSweepArgs::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required string arg = 1;
-  if (has_arg()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->arg().data(), this->arg().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      1, this->arg(), output);
+  // required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
+  if (has_assayconfig()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->assayconfig(), output);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
+  for (int i = 0; i < this->convertedsamples_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, this->convertedsamples(i), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -302,14 +439,18 @@ void FullSweepArgs::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* FullSweepArgs::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required string arg = 1;
-  if (has_arg()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->arg().data(), this->arg().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->arg(), target);
+  // required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
+  if (has_assayconfig()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->assayconfig(), target);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
+  for (int i = 0; i < this->convertedsamples_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        2, this->convertedsamples(i), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -323,14 +464,22 @@ int FullSweepArgs::ByteSize() const {
   int total_size = 0;
   
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required string arg = 1;
-    if (has_arg()) {
+    // required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
+    if (has_assayconfig()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->arg());
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->assayconfig());
     }
     
   }
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
+  total_size += 1 * this->convertedsamples_size();
+  for (int i = 0; i < this->convertedsamples_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->convertedsamples(i));
+  }
+  
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -356,9 +505,10 @@ void FullSweepArgs::MergeFrom(const ::google::protobuf::Message& from) {
 
 void FullSweepArgs::MergeFrom(const FullSweepArgs& from) {
   GOOGLE_CHECK_NE(&from, this);
+  convertedsamples_.MergeFrom(from.convertedsamples_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_arg()) {
-      set_arg(from.arg());
+    if (from.has_assayconfig()) {
+      mutable_assayconfig()->::ib::ffi::compute::v3_3_0::AssayConfiguration::MergeFrom(from.assayconfig());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -379,12 +529,19 @@ void FullSweepArgs::CopyFrom(const FullSweepArgs& from) {
 bool FullSweepArgs::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   
+  if (has_assayconfig()) {
+    if (!this->assayconfig().IsInitialized()) return false;
+  }
+  for (int i = 0; i < convertedsamples_size(); i++) {
+    if (!this->convertedsamples(i).IsInitialized()) return false;
+  }
   return true;
 }
 
 void FullSweepArgs::Swap(FullSweepArgs* other) {
   if (other != this) {
-    std::swap(arg_, other->arg_);
+    std::swap(assayconfig_, other->assayconfig_);
+    convertedsamples_.Swap(&other->convertedsamples_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -403,7 +560,7 @@ void FullSweepArgs::Swap(FullSweepArgs* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int FullSweepResult::kResultFieldNumber;
+const int FullSweepResult::kQuantitatedSamplesFieldNumber;
 #endif  // !_MSC_VER
 
 FullSweepResult::FullSweepResult()
@@ -422,7 +579,6 @@ FullSweepResult::FullSweepResult(const FullSweepResult& from)
 
 void FullSweepResult::SharedCtor() {
   _cached_size_ = 0;
-  result_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -431,9 +587,6 @@ FullSweepResult::~FullSweepResult() {
 }
 
 void FullSweepResult::SharedDtor() {
-  if (result_ != &::google::protobuf::internal::kEmptyString) {
-    delete result_;
-  }
   if (this != default_instance_) {
   }
 }
@@ -459,13 +612,7 @@ FullSweepResult* FullSweepResult::New() const {
 }
 
 void FullSweepResult::Clear() {
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (has_result()) {
-      if (result_ != &::google::protobuf::internal::kEmptyString) {
-        result_->clear();
-      }
-    }
-  }
+  quantitatedsamples_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -476,18 +623,17 @@ bool FullSweepResult::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string result = 1;
+      // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_result()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->result().data(), this->result().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
+         parse_quantitatedSamples:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quantitatedsamples()));
         } else {
           goto handle_uninterpreted;
         }
+        if (input->ExpectTag(10)) goto parse_quantitatedSamples;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -510,13 +656,10 @@ bool FullSweepResult::MergePartialFromCodedStream(
 
 void FullSweepResult::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required string result = 1;
-  if (has_result()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->result().data(), this->result().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      1, this->result(), output);
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
+  for (int i = 0; i < this->quantitatedsamples_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->quantitatedsamples(i), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -527,14 +670,11 @@ void FullSweepResult::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* FullSweepResult::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required string result = 1;
-  if (has_result()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->result().data(), this->result().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->result(), target);
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
+  for (int i = 0; i < this->quantitatedsamples_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        1, this->quantitatedsamples(i), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -547,15 +687,14 @@ void FullSweepResult::SerializeWithCachedSizes(
 int FullSweepResult::ByteSize() const {
   int total_size = 0;
   
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required string result = 1;
-    if (has_result()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->result());
-    }
-    
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
+  total_size += 1 * this->quantitatedsamples_size();
+  for (int i = 0; i < this->quantitatedsamples_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->quantitatedsamples(i));
   }
+  
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -581,11 +720,7 @@ void FullSweepResult::MergeFrom(const ::google::protobuf::Message& from) {
 
 void FullSweepResult::MergeFrom(const FullSweepResult& from) {
   GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_result()) {
-      set_result(from.result());
-    }
-  }
+  quantitatedsamples_.MergeFrom(from.quantitatedsamples_);
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
@@ -602,14 +737,16 @@ void FullSweepResult::CopyFrom(const FullSweepResult& from) {
 }
 
 bool FullSweepResult::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
   
+  for (int i = 0; i < quantitatedsamples_size(); i++) {
+    if (!this->quantitatedsamples(i).IsInitialized()) return false;
+  }
   return true;
 }
 
 void FullSweepResult::Swap(FullSweepResult* other) {
   if (other != this) {
-    std::swap(result_, other->result_);
+    quantitatedsamples_.Swap(&other->quantitatedsamples_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -628,155 +765,88 @@ void FullSweepResult::Swap(FullSweepResult* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int PerfTestArgs::kXBytesFieldNumber;
-const int PerfTestArgs::kYBytesFieldNumber;
-const int PerfTestArgs::kXDoublesFieldNumber;
-const int PerfTestArgs::kYDoublesFieldNumber;
+const int AssayConfiguration::kNameFieldNumber;
 #endif  // !_MSC_VER
 
-PerfTestArgs::PerfTestArgs()
+AssayConfiguration::AssayConfiguration()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void PerfTestArgs::InitAsDefaultInstance() {
+void AssayConfiguration::InitAsDefaultInstance() {
 }
 
-PerfTestArgs::PerfTestArgs(const PerfTestArgs& from)
+AssayConfiguration::AssayConfiguration(const AssayConfiguration& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void PerfTestArgs::SharedCtor() {
+void AssayConfiguration::SharedCtor() {
   _cached_size_ = 0;
-  xbytes_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  ybytes_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-PerfTestArgs::~PerfTestArgs() {
+AssayConfiguration::~AssayConfiguration() {
   SharedDtor();
 }
 
-void PerfTestArgs::SharedDtor() {
-  if (xbytes_ != &::google::protobuf::internal::kEmptyString) {
-    delete xbytes_;
-  }
-  if (ybytes_ != &::google::protobuf::internal::kEmptyString) {
-    delete ybytes_;
+void AssayConfiguration::SharedDtor() {
+  if (name_ != &::google::protobuf::internal::kEmptyString) {
+    delete name_;
   }
   if (this != default_instance_) {
   }
 }
 
-void PerfTestArgs::SetCachedSize(int size) const {
+void AssayConfiguration::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* PerfTestArgs::descriptor() {
+const ::google::protobuf::Descriptor* AssayConfiguration::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return PerfTestArgs_descriptor_;
+  return AssayConfiguration_descriptor_;
 }
 
-const PerfTestArgs& PerfTestArgs::default_instance() {
+const AssayConfiguration& AssayConfiguration::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
 }
 
-PerfTestArgs* PerfTestArgs::default_instance_ = NULL;
+AssayConfiguration* AssayConfiguration::default_instance_ = NULL;
 
-PerfTestArgs* PerfTestArgs::New() const {
-  return new PerfTestArgs;
+AssayConfiguration* AssayConfiguration::New() const {
+  return new AssayConfiguration;
 }
 
-void PerfTestArgs::Clear() {
+void AssayConfiguration::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (has_xbytes()) {
-      if (xbytes_ != &::google::protobuf::internal::kEmptyString) {
-        xbytes_->clear();
-      }
-    }
-    if (has_ybytes()) {
-      if (ybytes_ != &::google::protobuf::internal::kEmptyString) {
-        ybytes_->clear();
+    if (has_name()) {
+      if (name_ != &::google::protobuf::internal::kEmptyString) {
+        name_->clear();
       }
     }
   }
-  xdoubles_.Clear();
-  ydoubles_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
 
-bool PerfTestArgs::MergePartialFromCodedStream(
+bool AssayConfiguration::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional bytes xBytes = 1;
+      // required string name = 1;
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_xbytes()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(18)) goto parse_yBytes;
-        break;
-      }
-      
-      // optional bytes yBytes = 2;
-      case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_yBytes:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_ybytes()));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(26)) goto parse_xDoubles;
-        break;
-      }
-      
-      // repeated double xDoubles = 3 [packed = true];
-      case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_xDoubles:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_xdoubles())));
-        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                   == ::google::protobuf::internal::WireFormatLite::
-                      WIRETYPE_FIXED64) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 26, input, this->mutable_xdoubles())));
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(34)) goto parse_yDoubles;
-        break;
-      }
-      
-      // repeated double yDoubles = 4 [packed = true];
-      case 4: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_yDoubles:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_ydoubles())));
-        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                   == ::google::protobuf::internal::WireFormatLite::
-                      WIRETYPE_FIXED64) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 34, input, this->mutable_ydoubles())));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
         } else {
           goto handle_uninterpreted;
         }
@@ -800,38 +870,15 @@ bool PerfTestArgs::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void PerfTestArgs::SerializeWithCachedSizes(
+void AssayConfiguration::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // optional bytes xBytes = 1;
-  if (has_xbytes()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytes(
-      1, this->xbytes(), output);
-  }
-  
-  // optional bytes yBytes = 2;
-  if (has_ybytes()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytes(
-      2, this->ybytes(), output);
-  }
-  
-  // repeated double xDoubles = 3 [packed = true];
-  if (this->xdoubles_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_xdoubles_cached_byte_size_);
-  }
-  for (int i = 0; i < this->xdoubles_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleNoTag(
-      this->xdoubles(i), output);
-  }
-  
-  // repeated double yDoubles = 4 [packed = true];
-  if (this->ydoubles_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(4, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_ydoubles_cached_byte_size_);
-  }
-  for (int i = 0; i < this->ydoubles_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleNoTag(
-      this->ydoubles(i), output);
+  // required string name = 1;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->name(), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -840,48 +887,16 @@ void PerfTestArgs::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* PerfTestArgs::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* AssayConfiguration::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // optional bytes xBytes = 1;
-  if (has_xbytes()) {
+  // required string name = 1;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
     target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        1, this->xbytes(), target);
-  }
-  
-  // optional bytes yBytes = 2;
-  if (has_ybytes()) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->ybytes(), target);
-  }
-  
-  // repeated double xDoubles = 3 [packed = true];
-  if (this->xdoubles_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      3,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-      _xdoubles_cached_byte_size_, target);
-  }
-  for (int i = 0; i < this->xdoubles_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->xdoubles(i), target);
-  }
-  
-  // repeated double yDoubles = 4 [packed = true];
-  if (this->ydoubles_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      4,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-      _ydoubles_cached_byte_size_, target);
-  }
-  for (int i = 0; i < this->ydoubles_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->ydoubles(i), target);
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->name(), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -891,47 +906,385 @@ void PerfTestArgs::SerializeWithCachedSizes(
   return target;
 }
 
-int PerfTestArgs::ByteSize() const {
+int AssayConfiguration::ByteSize() const {
   int total_size = 0;
   
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // optional bytes xBytes = 1;
-    if (has_xbytes()) {
+    // required string name = 1;
+    if (has_name()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->xbytes());
-    }
-    
-    // optional bytes yBytes = 2;
-    if (has_ybytes()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::BytesSize(
-          this->ybytes());
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
     }
     
   }
-  // repeated double xDoubles = 3 [packed = true];
-  {
-    int data_size = 0;
-    data_size = 8 * this->xdoubles_size();
-    if (data_size > 0) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void AssayConfiguration::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const AssayConfiguration* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const AssayConfiguration*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void AssayConfiguration::MergeFrom(const AssayConfiguration& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_name()) {
+      set_name(from.name());
     }
-    _xdoubles_cached_byte_size_ = data_size;
-    total_size += data_size;
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void AssayConfiguration::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AssayConfiguration::CopyFrom(const AssayConfiguration& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AssayConfiguration::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+  
+  return true;
+}
+
+void AssayConfiguration::Swap(AssayConfiguration* other) {
+  if (other != this) {
+    std::swap(name_, other->name_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata AssayConfiguration::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = AssayConfiguration_descriptor_;
+  metadata.reflection = AssayConfiguration_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int QuantitatedSample::kIdFieldNumber;
+const int QuantitatedSample::kNameFieldNumber;
+const int QuantitatedSample::kUniqueIdFieldNumber;
+const int QuantitatedSample::kQuantitatedCompoundsFieldNumber;
+#endif  // !_MSC_VER
+
+QuantitatedSample::QuantitatedSample()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void QuantitatedSample::InitAsDefaultInstance() {
+}
+
+QuantitatedSample::QuantitatedSample(const QuantitatedSample& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void QuantitatedSample::SharedCtor() {
+  _cached_size_ = 0;
+  id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  unique_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+QuantitatedSample::~QuantitatedSample() {
+  SharedDtor();
+}
+
+void QuantitatedSample::SharedDtor() {
+  if (id_ != &::google::protobuf::internal::kEmptyString) {
+    delete id_;
+  }
+  if (name_ != &::google::protobuf::internal::kEmptyString) {
+    delete name_;
+  }
+  if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete unique_id_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void QuantitatedSample::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* QuantitatedSample::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return QuantitatedSample_descriptor_;
+}
+
+const QuantitatedSample& QuantitatedSample::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
+}
+
+QuantitatedSample* QuantitatedSample::default_instance_ = NULL;
+
+QuantitatedSample* QuantitatedSample::New() const {
+  return new QuantitatedSample;
+}
+
+void QuantitatedSample::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_id()) {
+      if (id_ != &::google::protobuf::internal::kEmptyString) {
+        id_->clear();
+      }
+    }
+    if (has_name()) {
+      if (name_ != &::google::protobuf::internal::kEmptyString) {
+        name_->clear();
+      }
+    }
+    if (has_unique_id()) {
+      if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
+        unique_id_->clear();
+      }
+    }
+  }
+  quantitatedcompounds_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool QuantitatedSample::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required string id = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_name;
+        break;
+      }
+      
+      // required string name = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_unique_id;
+        break;
+      }
+      
+      // required string unique_id = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_unique_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_unique_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->unique_id().data(), this->unique_id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_quantitatedCompounds;
+        break;
+      }
+      
+      // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_quantitatedCompounds:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quantitatedcompounds()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_quantitatedCompounds;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void QuantitatedSample::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->id(), output);
   }
   
-  // repeated double yDoubles = 4 [packed = true];
-  {
-    int data_size = 0;
-    data_size = 8 * this->ydoubles_size();
-    if (data_size > 0) {
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->name(), output);
+  }
+  
+  // required string unique_id = 3;
+  if (has_unique_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->unique_id().data(), this->unique_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->unique_id(), output);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
+  for (int i = 0; i < this->quantitatedcompounds_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->quantitatedcompounds(i), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* QuantitatedSample::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->name(), target);
+  }
+  
+  // required string unique_id = 3;
+  if (has_unique_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->unique_id().data(), this->unique_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->unique_id(), target);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
+  for (int i = 0; i < this->quantitatedcompounds_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->quantitatedcompounds(i), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int QuantitatedSample::ByteSize() const {
+  int total_size = 0;
+  
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required string id = 1;
+    if (has_id()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->id());
     }
-    _ydoubles_cached_byte_size_ = data_size;
-    total_size += data_size;
+    
+    // required string name = 2;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
+    
+    // required string unique_id = 3;
+    if (has_unique_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->unique_id());
+    }
+    
+  }
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
+  total_size += 1 * this->quantitatedcompounds_size();
+  for (int i = 0; i < this->quantitatedcompounds_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->quantitatedcompounds(i));
   }
   
   if (!unknown_fields().empty()) {
@@ -945,10 +1298,10 @@ int PerfTestArgs::ByteSize() const {
   return total_size;
 }
 
-void PerfTestArgs::MergeFrom(const ::google::protobuf::Message& from) {
+void QuantitatedSample::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const PerfTestArgs* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const PerfTestArgs*>(
+  const QuantitatedSample* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const QuantitatedSample*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -957,55 +1310,61 @@ void PerfTestArgs::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void PerfTestArgs::MergeFrom(const PerfTestArgs& from) {
+void QuantitatedSample::MergeFrom(const QuantitatedSample& from) {
   GOOGLE_CHECK_NE(&from, this);
-  xdoubles_.MergeFrom(from.xdoubles_);
-  ydoubles_.MergeFrom(from.ydoubles_);
+  quantitatedcompounds_.MergeFrom(from.quantitatedcompounds_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_xbytes()) {
-      set_xbytes(from.xbytes());
+    if (from.has_id()) {
+      set_id(from.id());
     }
-    if (from.has_ybytes()) {
-      set_ybytes(from.ybytes());
+    if (from.has_name()) {
+      set_name(from.name());
+    }
+    if (from.has_unique_id()) {
+      set_unique_id(from.unique_id());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void PerfTestArgs::CopyFrom(const ::google::protobuf::Message& from) {
+void QuantitatedSample::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PerfTestArgs::CopyFrom(const PerfTestArgs& from) {
+void QuantitatedSample::CopyFrom(const QuantitatedSample& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool PerfTestArgs::IsInitialized() const {
+bool QuantitatedSample::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   
+  for (int i = 0; i < quantitatedcompounds_size(); i++) {
+    if (!this->quantitatedcompounds(i).IsInitialized()) return false;
+  }
   return true;
 }
 
-void PerfTestArgs::Swap(PerfTestArgs* other) {
+void QuantitatedSample::Swap(QuantitatedSample* other) {
   if (other != this) {
-    std::swap(xbytes_, other->xbytes_);
-    std::swap(ybytes_, other->ybytes_);
-    xdoubles_.Swap(&other->xdoubles_);
-    ydoubles_.Swap(&other->ydoubles_);
+    std::swap(id_, other->id_);
+    std::swap(name_, other->name_);
+    std::swap(unique_id_, other->unique_id_);
+    quantitatedcompounds_.Swap(&other->quantitatedcompounds_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
   }
 }
 
-::google::protobuf::Metadata PerfTestArgs::GetMetadata() const {
+::google::protobuf::Metadata QuantitatedSample::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PerfTestArgs_descriptor_;
-  metadata.reflection = PerfTestArgs_reflection_;
+  metadata.descriptor = QuantitatedSample_descriptor_;
+  metadata.reflection = QuantitatedSample_reflection_;
   return metadata;
 }
 
@@ -1013,80 +1372,440 @@ void PerfTestArgs::Swap(PerfTestArgs* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int PerfTestResult::kResultFieldNumber;
+const int QuantitatedCompound::kIdFieldNumber;
+const int QuantitatedCompound::kNameFieldNumber;
+const int QuantitatedCompound::kQuantitatedChromatogramsFieldNumber;
 #endif  // !_MSC_VER
 
-PerfTestResult::PerfTestResult()
+QuantitatedCompound::QuantitatedCompound()
   : ::google::protobuf::Message() {
   SharedCtor();
 }
 
-void PerfTestResult::InitAsDefaultInstance() {
+void QuantitatedCompound::InitAsDefaultInstance() {
 }
 
-PerfTestResult::PerfTestResult(const PerfTestResult& from)
+QuantitatedCompound::QuantitatedCompound(const QuantitatedCompound& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
 }
 
-void PerfTestResult::SharedCtor() {
+void QuantitatedCompound::SharedCtor() {
   _cached_size_ = 0;
-  result_ = 0;
+  id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-PerfTestResult::~PerfTestResult() {
+QuantitatedCompound::~QuantitatedCompound() {
   SharedDtor();
 }
 
-void PerfTestResult::SharedDtor() {
+void QuantitatedCompound::SharedDtor() {
+  if (id_ != &::google::protobuf::internal::kEmptyString) {
+    delete id_;
+  }
+  if (name_ != &::google::protobuf::internal::kEmptyString) {
+    delete name_;
+  }
   if (this != default_instance_) {
   }
 }
 
-void PerfTestResult::SetCachedSize(int size) const {
+void QuantitatedCompound::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* PerfTestResult::descriptor() {
+const ::google::protobuf::Descriptor* QuantitatedCompound::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return PerfTestResult_descriptor_;
+  return QuantitatedCompound_descriptor_;
 }
 
-const PerfTestResult& PerfTestResult::default_instance() {
+const QuantitatedCompound& QuantitatedCompound::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
 }
 
-PerfTestResult* PerfTestResult::default_instance_ = NULL;
+QuantitatedCompound* QuantitatedCompound::default_instance_ = NULL;
 
-PerfTestResult* PerfTestResult::New() const {
-  return new PerfTestResult;
+QuantitatedCompound* QuantitatedCompound::New() const {
+  return new QuantitatedCompound;
 }
 
-void PerfTestResult::Clear() {
+void QuantitatedCompound::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    result_ = 0;
+    if (has_id()) {
+      if (id_ != &::google::protobuf::internal::kEmptyString) {
+        id_->clear();
+      }
+    }
+    if (has_name()) {
+      if (name_ != &::google::protobuf::internal::kEmptyString) {
+        name_->clear();
+      }
+    }
   }
+  quantitatedchromatograms_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
 
-bool PerfTestResult::MergePartialFromCodedStream(
+bool QuantitatedCompound::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) return false
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required double result = 1;
+      // required string id = 1;
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &result_)));
-          set_has_result();
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_name;
+        break;
+      }
+      
+      // required string name = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_quantitatedChromatograms;
+        break;
+      }
+      
+      // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_quantitatedChromatograms:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_quantitatedchromatograms()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_quantitatedChromatograms;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void QuantitatedCompound::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->id(), output);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->name(), output);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
+  for (int i = 0; i < this->quantitatedchromatograms_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, this->quantitatedchromatograms(i), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* QuantitatedCompound::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->name(), target);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
+  for (int i = 0; i < this->quantitatedchromatograms_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        3, this->quantitatedchromatograms(i), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int QuantitatedCompound::ByteSize() const {
+  int total_size = 0;
+  
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required string id = 1;
+    if (has_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->id());
+    }
+    
+    // required string name = 2;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
+    
+  }
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
+  total_size += 1 * this->quantitatedchromatograms_size();
+  for (int i = 0; i < this->quantitatedchromatograms_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->quantitatedchromatograms(i));
+  }
+  
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void QuantitatedCompound::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const QuantitatedCompound* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const QuantitatedCompound*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void QuantitatedCompound::MergeFrom(const QuantitatedCompound& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  quantitatedchromatograms_.MergeFrom(from.quantitatedchromatograms_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_id()) {
+      set_id(from.id());
+    }
+    if (from.has_name()) {
+      set_name(from.name());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void QuantitatedCompound::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void QuantitatedCompound::CopyFrom(const QuantitatedCompound& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool QuantitatedCompound::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+  
+  for (int i = 0; i < quantitatedchromatograms_size(); i++) {
+    if (!this->quantitatedchromatograms(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void QuantitatedCompound::Swap(QuantitatedCompound* other) {
+  if (other != this) {
+    std::swap(id_, other->id_);
+    std::swap(name_, other->name_);
+    quantitatedchromatograms_.Swap(&other->quantitatedchromatograms_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata QuantitatedCompound::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = QuantitatedCompound_descriptor_;
+  metadata.reflection = QuantitatedCompound_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int QuantitatedChromatogram::kIdFieldNumber;
+const int QuantitatedChromatogram::kNameFieldNumber;
+#endif  // !_MSC_VER
+
+QuantitatedChromatogram::QuantitatedChromatogram()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void QuantitatedChromatogram::InitAsDefaultInstance() {
+}
+
+QuantitatedChromatogram::QuantitatedChromatogram(const QuantitatedChromatogram& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void QuantitatedChromatogram::SharedCtor() {
+  _cached_size_ = 0;
+  id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+QuantitatedChromatogram::~QuantitatedChromatogram() {
+  SharedDtor();
+}
+
+void QuantitatedChromatogram::SharedDtor() {
+  if (id_ != &::google::protobuf::internal::kEmptyString) {
+    delete id_;
+  }
+  if (name_ != &::google::protobuf::internal::kEmptyString) {
+    delete name_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void QuantitatedChromatogram::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* QuantitatedChromatogram::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return QuantitatedChromatogram_descriptor_;
+}
+
+const QuantitatedChromatogram& QuantitatedChromatogram::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
+}
+
+QuantitatedChromatogram* QuantitatedChromatogram::default_instance_ = NULL;
+
+QuantitatedChromatogram* QuantitatedChromatogram::New() const {
+  return new QuantitatedChromatogram;
+}
+
+void QuantitatedChromatogram::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_id()) {
+      if (id_ != &::google::protobuf::internal::kEmptyString) {
+        id_->clear();
+      }
+    }
+    if (has_name()) {
+      if (name_ != &::google::protobuf::internal::kEmptyString) {
+        name_->clear();
+      }
+    }
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool QuantitatedChromatogram::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required string id = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_name;
+        break;
+      }
+      
+      // required string name = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
         } else {
           goto handle_uninterpreted;
         }
@@ -1110,11 +1829,24 @@ bool PerfTestResult::MergePartialFromCodedStream(
 #undef DO_
 }
 
-void PerfTestResult::SerializeWithCachedSizes(
+void QuantitatedChromatogram::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required double result = 1;
-  if (has_result()) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->result(), output);
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->id(), output);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->name(), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -1123,11 +1855,26 @@ void PerfTestResult::SerializeWithCachedSizes(
   }
 }
 
-::google::protobuf::uint8* PerfTestResult::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* QuantitatedChromatogram::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required double result = 1;
-  if (has_result()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->result(), target);
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->name(), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -1137,12 +1884,787 @@ void PerfTestResult::SerializeWithCachedSizes(
   return target;
 }
 
-int PerfTestResult::ByteSize() const {
+int QuantitatedChromatogram::ByteSize() const {
   int total_size = 0;
   
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required double result = 1;
-    if (has_result()) {
+    // required string id = 1;
+    if (has_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->id());
+    }
+    
+    // required string name = 2;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
+    
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void QuantitatedChromatogram::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const QuantitatedChromatogram* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const QuantitatedChromatogram*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void QuantitatedChromatogram::MergeFrom(const QuantitatedChromatogram& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_id()) {
+      set_id(from.id());
+    }
+    if (from.has_name()) {
+      set_name(from.name());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void QuantitatedChromatogram::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void QuantitatedChromatogram::CopyFrom(const QuantitatedChromatogram& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool QuantitatedChromatogram::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+  
+  return true;
+}
+
+void QuantitatedChromatogram::Swap(QuantitatedChromatogram* other) {
+  if (other != this) {
+    std::swap(id_, other->id_);
+    std::swap(name_, other->name_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata QuantitatedChromatogram::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = QuantitatedChromatogram_descriptor_;
+  metadata.reflection = QuantitatedChromatogram_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ConvertedSample::kIdFieldNumber;
+const int ConvertedSample::kNameFieldNumber;
+const int ConvertedSample::kUniqueIdFieldNumber;
+const int ConvertedSample::kConvertedChromatogramsFieldNumber;
+#endif  // !_MSC_VER
+
+ConvertedSample::ConvertedSample()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ConvertedSample::InitAsDefaultInstance() {
+}
+
+ConvertedSample::ConvertedSample(const ConvertedSample& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ConvertedSample::SharedCtor() {
+  _cached_size_ = 0;
+  id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  unique_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ConvertedSample::~ConvertedSample() {
+  SharedDtor();
+}
+
+void ConvertedSample::SharedDtor() {
+  if (id_ != &::google::protobuf::internal::kEmptyString) {
+    delete id_;
+  }
+  if (name_ != &::google::protobuf::internal::kEmptyString) {
+    delete name_;
+  }
+  if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
+    delete unique_id_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void ConvertedSample::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ConvertedSample::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ConvertedSample_descriptor_;
+}
+
+const ConvertedSample& ConvertedSample::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
+}
+
+ConvertedSample* ConvertedSample::default_instance_ = NULL;
+
+ConvertedSample* ConvertedSample::New() const {
+  return new ConvertedSample;
+}
+
+void ConvertedSample::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_id()) {
+      if (id_ != &::google::protobuf::internal::kEmptyString) {
+        id_->clear();
+      }
+    }
+    if (has_name()) {
+      if (name_ != &::google::protobuf::internal::kEmptyString) {
+        name_->clear();
+      }
+    }
+    if (has_unique_id()) {
+      if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
+        unique_id_->clear();
+      }
+    }
+  }
+  convertedchromatograms_.Clear();
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ConvertedSample::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required string id = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(18)) goto parse_name;
+        break;
+      }
+      
+      // required string name = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_name:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->name().data(), this->name().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(26)) goto parse_unique_id;
+        break;
+      }
+      
+      // required string unique_id = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_unique_id:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_unique_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->unique_id().data(), this->unique_id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_convertedChromatograms;
+        break;
+      }
+      
+      // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_convertedChromatograms:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_convertedchromatograms()));
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_convertedChromatograms;
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ConvertedSample::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->id(), output);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      2, this->name(), output);
+  }
+  
+  // required string unique_id = 3;
+  if (has_unique_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->unique_id().data(), this->unique_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      3, this->unique_id(), output);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  for (int i = 0; i < this->convertedchromatograms_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, this->convertedchromatograms(i), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ConvertedSample::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+  
+  // required string name = 2;
+  if (has_name()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->name().data(), this->name().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->name(), target);
+  }
+  
+  // required string unique_id = 3;
+  if (has_unique_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->unique_id().data(), this->unique_id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        3, this->unique_id(), target);
+  }
+  
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  for (int i = 0; i < this->convertedchromatograms_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteMessageNoVirtualToArray(
+        4, this->convertedchromatograms(i), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ConvertedSample::ByteSize() const {
+  int total_size = 0;
+  
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required string id = 1;
+    if (has_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->id());
+    }
+    
+    // required string name = 2;
+    if (has_name()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->name());
+    }
+    
+    // required string unique_id = 3;
+    if (has_unique_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->unique_id());
+    }
+    
+  }
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  total_size += 1 * this->convertedchromatograms_size();
+  for (int i = 0; i < this->convertedchromatograms_size(); i++) {
+    total_size +=
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        this->convertedchromatograms(i));
+  }
+  
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void ConvertedSample::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const ConvertedSample* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ConvertedSample*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void ConvertedSample::MergeFrom(const ConvertedSample& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  convertedchromatograms_.MergeFrom(from.convertedchromatograms_);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_id()) {
+      set_id(from.id());
+    }
+    if (from.has_name()) {
+      set_name(from.name());
+    }
+    if (from.has_unique_id()) {
+      set_unique_id(from.unique_id());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void ConvertedSample::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ConvertedSample::CopyFrom(const ConvertedSample& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ConvertedSample::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  
+  for (int i = 0; i < convertedchromatograms_size(); i++) {
+    if (!this->convertedchromatograms(i).IsInitialized()) return false;
+  }
+  return true;
+}
+
+void ConvertedSample::Swap(ConvertedSample* other) {
+  if (other != this) {
+    std::swap(id_, other->id_);
+    std::swap(name_, other->name_);
+    std::swap(unique_id_, other->unique_id_);
+    convertedchromatograms_.Swap(&other->convertedchromatograms_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata ConvertedSample::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = ConvertedSample_descriptor_;
+  metadata.reflection = ConvertedSample_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int ConvertedChromatogram::kIdFieldNumber;
+const int ConvertedChromatogram::kPrecursorFieldNumber;
+const int ConvertedChromatogram::kProductFieldNumber;
+const int ConvertedChromatogram::kPolarityFieldNumber;
+const int ConvertedChromatogram::kCollisionEnergyFieldNumber;
+#endif  // !_MSC_VER
+
+ConvertedChromatogram::ConvertedChromatogram()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void ConvertedChromatogram::InitAsDefaultInstance() {
+}
+
+ConvertedChromatogram::ConvertedChromatogram(const ConvertedChromatogram& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void ConvertedChromatogram::SharedCtor() {
+  _cached_size_ = 0;
+  id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  precursor_ = 0;
+  product_ = 0;
+  polarity_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  collisionenergy_ = 0;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+ConvertedChromatogram::~ConvertedChromatogram() {
+  SharedDtor();
+}
+
+void ConvertedChromatogram::SharedDtor() {
+  if (id_ != &::google::protobuf::internal::kEmptyString) {
+    delete id_;
+  }
+  if (polarity_ != &::google::protobuf::internal::kEmptyString) {
+    delete polarity_;
+  }
+  if (this != default_instance_) {
+  }
+}
+
+void ConvertedChromatogram::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* ConvertedChromatogram::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return ConvertedChromatogram_descriptor_;
+}
+
+const ConvertedChromatogram& ConvertedChromatogram::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();  return *default_instance_;
+}
+
+ConvertedChromatogram* ConvertedChromatogram::default_instance_ = NULL;
+
+ConvertedChromatogram* ConvertedChromatogram::New() const {
+  return new ConvertedChromatogram;
+}
+
+void ConvertedChromatogram::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (has_id()) {
+      if (id_ != &::google::protobuf::internal::kEmptyString) {
+        id_->clear();
+      }
+    }
+    precursor_ = 0;
+    product_ = 0;
+    if (has_polarity()) {
+      if (polarity_ != &::google::protobuf::internal::kEmptyString) {
+        polarity_->clear();
+      }
+    }
+    collisionenergy_ = 0;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool ConvertedChromatogram::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required string id = 1;
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_id()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->id().data(), this->id().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(17)) goto parse_precursor;
+        break;
+      }
+      
+      // optional double precursor = 2;
+      case 2: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+         parse_precursor:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &precursor_)));
+          set_has_precursor();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(25)) goto parse_product;
+        break;
+      }
+      
+      // required double product = 3;
+      case 3: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+         parse_product:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &product_)));
+          set_has_product();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(34)) goto parse_polarity;
+        break;
+      }
+      
+      // required string polarity = 4;
+      case 4: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
+         parse_polarity:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_polarity()));
+          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+            this->polarity().data(), this->polarity().length(),
+            ::google::protobuf::internal::WireFormat::PARSE);
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectTag(41)) goto parse_collisionEnergy;
+        break;
+      }
+      
+      // optional double collisionEnergy = 5;
+      case 5: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED64) {
+         parse_collisionEnergy:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, &collisionenergy_)));
+          set_has_collisionenergy();
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+      
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void ConvertedChromatogram::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      1, this->id(), output);
+  }
+  
+  // optional double precursor = 2;
+  if (has_precursor()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->precursor(), output);
+  }
+  
+  // required double product = 3;
+  if (has_product()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->product(), output);
+  }
+  
+  // required string polarity = 4;
+  if (has_polarity()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->polarity().data(), this->polarity().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      4, this->polarity(), output);
+  }
+  
+  // optional double collisionEnergy = 5;
+  if (has_collisionenergy()) {
+    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->collisionenergy(), output);
+  }
+  
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* ConvertedChromatogram::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // required string id = 1;
+  if (has_id()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->id().data(), this->id().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->id(), target);
+  }
+  
+  // optional double precursor = 2;
+  if (has_precursor()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->precursor(), target);
+  }
+  
+  // required double product = 3;
+  if (has_product()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->product(), target);
+  }
+  
+  // required string polarity = 4;
+  if (has_polarity()) {
+    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
+      this->polarity().data(), this->polarity().length(),
+      ::google::protobuf::internal::WireFormat::SERIALIZE);
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->polarity(), target);
+  }
+  
+  // optional double collisionEnergy = 5;
+  if (has_collisionenergy()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->collisionenergy(), target);
+  }
+  
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int ConvertedChromatogram::ByteSize() const {
+  int total_size = 0;
+  
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // required string id = 1;
+    if (has_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->id());
+    }
+    
+    // optional double precursor = 2;
+    if (has_precursor()) {
+      total_size += 1 + 8;
+    }
+    
+    // required double product = 3;
+    if (has_product()) {
+      total_size += 1 + 8;
+    }
+    
+    // required string polarity = 4;
+    if (has_polarity()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::StringSize(
+          this->polarity());
+    }
+    
+    // optional double collisionEnergy = 5;
+    if (has_collisionenergy()) {
       total_size += 1 + 8;
     }
     
@@ -1158,10 +2680,10 @@ int PerfTestResult::ByteSize() const {
   return total_size;
 }
 
-void PerfTestResult::MergeFrom(const ::google::protobuf::Message& from) {
+void ConvertedChromatogram::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const PerfTestResult* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const PerfTestResult*>(
+  const ConvertedChromatogram* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const ConvertedChromatogram*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -1170,48 +2692,64 @@ void PerfTestResult::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void PerfTestResult::MergeFrom(const PerfTestResult& from) {
+void ConvertedChromatogram::MergeFrom(const ConvertedChromatogram& from) {
   GOOGLE_CHECK_NE(&from, this);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_result()) {
-      set_result(from.result());
+    if (from.has_id()) {
+      set_id(from.id());
+    }
+    if (from.has_precursor()) {
+      set_precursor(from.precursor());
+    }
+    if (from.has_product()) {
+      set_product(from.product());
+    }
+    if (from.has_polarity()) {
+      set_polarity(from.polarity());
+    }
+    if (from.has_collisionenergy()) {
+      set_collisionenergy(from.collisionenergy());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void PerfTestResult::CopyFrom(const ::google::protobuf::Message& from) {
+void ConvertedChromatogram::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PerfTestResult::CopyFrom(const PerfTestResult& from) {
+void ConvertedChromatogram::CopyFrom(const ConvertedChromatogram& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool PerfTestResult::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+bool ConvertedChromatogram::IsInitialized() const {
+  if ((_has_bits_[0] & 0x0000000d) != 0x0000000d) return false;
   
   return true;
 }
 
-void PerfTestResult::Swap(PerfTestResult* other) {
+void ConvertedChromatogram::Swap(ConvertedChromatogram* other) {
   if (other != this) {
-    std::swap(result_, other->result_);
+    std::swap(id_, other->id_);
+    std::swap(precursor_, other->precursor_);
+    std::swap(product_, other->product_);
+    std::swap(polarity_, other->polarity_);
+    std::swap(collisionenergy_, other->collisionenergy_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
   }
 }
 
-::google::protobuf::Metadata PerfTestResult::GetMetadata() const {
+::google::protobuf::Metadata ConvertedChromatogram::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = PerfTestResult_descriptor_;
-  metadata.reflection = PerfTestResult_reflection_;
+  metadata.descriptor = ConvertedChromatogram_descriptor_;
+  metadata.reflection = ConvertedChromatogram_reflection_;
   return metadata;
 }
 

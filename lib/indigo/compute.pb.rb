@@ -14,31 +14,74 @@ module Ib
           include Beefcake::Message
         end
 
-        class PerfTestArgs
+        class AssayConfiguration
           include Beefcake::Message
         end
 
-        class PerfTestResult
+        class QuantitatedSample
+          include Beefcake::Message
+        end
+
+        class QuantitatedCompound
+          include Beefcake::Message
+        end
+
+        class QuantitatedChromatogram
+          include Beefcake::Message
+        end
+
+        class ConvertedSample
+          include Beefcake::Message
+        end
+
+        class ConvertedChromatogram
           include Beefcake::Message
         end
 
         class FullSweepArgs
-          required :arg, :string, 1
+          required :assayConfig, AssayConfiguration, 1
+          repeated :convertedSamples, ConvertedSample, 2
         end
 
         class FullSweepResult
-          required :result, :string, 1
+          repeated :quantitatedSamples, QuantitatedSample, 1
         end
 
-        class PerfTestArgs
-          optional :xBytes, :bytes, 1
-          optional :yBytes, :bytes, 2
-          repeated :xDoubles, :double, 3
-          repeated :yDoubles, :double, 4
+        class AssayConfiguration
+          required :name, :string, 1
         end
 
-        class PerfTestResult
-          required :result, :double, 1
+        class QuantitatedSample
+          required :id, :string, 1
+          required :name, :string, 2
+          required :unique_id, :string, 3
+          repeated :quantitatedCompounds, QuantitatedCompound, 4
+        end
+
+        class QuantitatedCompound
+          required :id, :string, 1
+          required :name, :string, 2
+          repeated :quantitatedChromatograms, QuantitatedChromatogram, 3
+        end
+
+        class QuantitatedChromatogram
+          required :id, :string, 1
+          required :name, :string, 2
+        end
+
+        class ConvertedSample
+          required :id, :string, 1
+          required :name, :string, 2
+          required :unique_id, :string, 3
+          repeated :convertedChromatograms, ConvertedChromatogram, 4
+        end
+
+        class ConvertedChromatogram
+          required :id, :string, 1
+          optional :precursor, :double, 2
+          required :product, :double, 3
+          required :polarity, :string, 4
+          optional :collisionEnergy, :double, 5
         end
       end
     end
