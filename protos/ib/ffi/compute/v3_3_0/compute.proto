@@ -45,9 +45,8 @@ message QuantitatedChromatogram {
 
 message ConvertedSample {
   required string id = 1;
-  required string name = 2;
-  required string unique_id = 3;
-  repeated ConvertedChromatogram convertedChromatograms = 4;
+  required string unique_id = 2;
+  repeated ConvertedChromatogram convertedChromatograms = 3;
 }
 
 message ConvertedChromatogram {

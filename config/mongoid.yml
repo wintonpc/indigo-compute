@@ -1,0 +1,24 @@
+development:
+  sessions:
+    default:
+      hosts:
+        - 127.0.0.1:27017
+      database: ascent_production
+  options:
+    use_utc: true
+test:
+  sessions:
+    default:
+      hosts:
+        - 127.0.0.1:27017
+      database: ascent_production_test
+  options:
+    use_utc: true
+production:
+  sessions:
+    default:
+      hosts:
+        - 127.0.0.1:27017
+      database: ascent_production
+  options:
+    use_utc: true

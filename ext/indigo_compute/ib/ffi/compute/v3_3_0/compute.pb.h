@@ -718,21 +718,10 @@ class ConvertedSample : public ::google::protobuf::Message {
   inline ::std::string* mutable_id();
   inline ::std::string* release_id();
   
-  // required string name = 2;
-  inline bool has_name() const;
-  inline void clear_name();
-  static const int kNameFieldNumber = 2;
-  inline const ::std::string& name() const;
-  inline void set_name(const ::std::string& value);
-  inline void set_name(const char* value);
-  inline void set_name(const char* value, size_t size);
-  inline ::std::string* mutable_name();
-  inline ::std::string* release_name();
-  
-  // required string unique_id = 3;
+  // required string unique_id = 2;
   inline bool has_unique_id() const;
   inline void clear_unique_id();
-  static const int kUniqueIdFieldNumber = 3;
+  static const int kUniqueIdFieldNumber = 2;
   inline const ::std::string& unique_id() const;
   inline void set_unique_id(const ::std::string& value);
   inline void set_unique_id(const char* value);
@@ -740,10 +729,10 @@ class ConvertedSample : public ::google::protobuf::Message {
   inline ::std::string* mutable_unique_id();
   inline ::std::string* release_unique_id();
   
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
   inline int convertedchromatograms_size() const;
   inline void clear_convertedchromatograms();
-  static const int kConvertedChromatogramsFieldNumber = 4;
+  static const int kConvertedChromatogramsFieldNumber = 3;
   inline const ::ib::ffi::compute::v3_3_0::ConvertedChromatogram& convertedchromatograms(int index) const;
   inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* mutable_convertedchromatograms(int index);
   inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* add_convertedchromatograms();
@@ -756,20 +745,17 @@ class ConvertedSample : public ::google::protobuf::Message {
  private:
   inline void set_has_id();
   inline void clear_has_id();
-  inline void set_has_name();
-  inline void clear_has_name();
   inline void set_has_unique_id();
   inline void clear_has_unique_id();
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
   ::std::string* id_;
-  ::std::string* name_;
   ::std::string* unique_id_;
   ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram > convertedchromatograms_;
   
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
   
   friend void  protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
   friend void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto();
@@ -1590,73 +1576,15 @@ inline ::std::string* ConvertedSample::release_id() {
   }
 }
 
-// required string name = 2;
-inline bool ConvertedSample::has_name() const {
+// required string unique_id = 2;
+inline bool ConvertedSample::has_unique_id() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ConvertedSample::set_has_name() {
+inline void ConvertedSample::set_has_unique_id() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ConvertedSample::clear_has_name() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void ConvertedSample::clear_name() {
-  if (name_ != &::google::protobuf::internal::kEmptyString) {
-    name_->clear();
-  }
-  clear_has_name();
-}
-inline const ::std::string& ConvertedSample::name() const {
-  return *name_;
-}
-inline void ConvertedSample::set_name(const ::std::string& value) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::kEmptyString) {
-    name_ = new ::std::string;
-  }
-  name_->assign(value);
-}
-inline void ConvertedSample::set_name(const char* value) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::kEmptyString) {
-    name_ = new ::std::string;
-  }
-  name_->assign(value);
-}
-inline void ConvertedSample::set_name(const char* value, size_t size) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::kEmptyString) {
-    name_ = new ::std::string;
-  }
-  name_->assign(reinterpret_cast<const char*>(value), size);
-}
-inline ::std::string* ConvertedSample::mutable_name() {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::kEmptyString) {
-    name_ = new ::std::string;
-  }
-  return name_;
-}
-inline ::std::string* ConvertedSample::release_name() {
-  clear_has_name();
-  if (name_ == &::google::protobuf::internal::kEmptyString) {
-    return NULL;
-  } else {
-    ::std::string* temp = name_;
-    name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-    return temp;
-  }
-}
-
-// required string unique_id = 3;
-inline bool ConvertedSample::has_unique_id() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void ConvertedSample::set_has_unique_id() {
-  _has_bits_[0] |= 0x00000004u;
-}
 inline void ConvertedSample::clear_has_unique_id() {
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void ConvertedSample::clear_unique_id() {
   if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
@@ -1706,7 +1634,7 @@ inline ::std::string* ConvertedSample::release_unique_id() {
   }
 }
 
-// repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+// repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
 inline int ConvertedSample::convertedchromatograms_size() const {
   return convertedchromatograms_.size();
 }

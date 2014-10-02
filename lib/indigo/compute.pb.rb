@@ -71,9 +71,8 @@ module Ib
 
         class ConvertedSample
           required :id, :string, 1
-          required :name, :string, 2
-          required :unique_id, :string, 3
-          repeated :convertedChromatograms, ConvertedChromatogram, 4
+          required :unique_id, :string, 2
+          repeated :convertedChromatograms, ConvertedChromatogram, 3
         end
 
         class ConvertedChromatogram

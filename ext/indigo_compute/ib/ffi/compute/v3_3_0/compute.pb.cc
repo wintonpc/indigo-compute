@@ -152,9 +152,8 @@ void protobuf_AssignDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(QuantitatedChromatogram));
   ConvertedSample_descriptor_ = file->message_type(6);
-  static const int ConvertedSample_offsets_[4] = {
+  static const int ConvertedSample_offsets_[3] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, unique_id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ConvertedSample, convertedchromatograms_),
   };
@@ -262,13 +261,13 @@ void protobuf_AddDesc_ib_2fffi_2fcompute_2fv3_5f3_5f0_2fcompute_2eproto() {
     " \002(\t\022P\n\030quantitatedChromatograms\030\003 \003(\0132."
     ".ib.ffi.compute.v3_3_0.QuantitatedChroma"
     "togram\"3\n\027QuantitatedChromatogram\022\n\n\002id\030"
-    "\001 \002(\t\022\014\n\004name\030\002 \002(\t\"\214\001\n\017ConvertedSample\022"
-    "\n\n\002id\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\021\n\tunique_id\030\003"
-    " \002(\t\022L\n\026convertedChromatograms\030\004 \003(\0132,.i"
-    "b.ffi.compute.v3_3_0.ConvertedChromatogr"
-    "am\"r\n\025ConvertedChromatogram\022\n\n\002id\030\001 \002(\t\022"
-    "\021\n\tprecursor\030\002 \001(\001\022\017\n\007product\030\003 \002(\001\022\020\n\010p"
-    "olarity\030\004 \002(\t\022\027\n\017collisionEnergy\030\005 \001(\001", 918);
+    "\001 \002(\t\022\014\n\004name\030\002 \002(\t\"~\n\017ConvertedSample\022\n"
+    "\n\002id\030\001 \002(\t\022\021\n\tunique_id\030\002 \002(\t\022L\n\026convert"
+    "edChromatograms\030\003 \003(\0132,.ib.ffi.compute.v"
+    "3_3_0.ConvertedChromatogram\"r\n\025Converted"
+    "Chromatogram\022\n\n\002id\030\001 \002(\t\022\021\n\tprecursor\030\002 "
+    "\001(\001\022\017\n\007product\030\003 \002(\001\022\020\n\010polarity\030\004 \002(\t\022\027"
+    "\n\017collisionEnergy\030\005 \001(\001", 903);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ib/ffi/compute/v3_3_0/compute.proto", &protobuf_RegisterTypes);
   FullSweepArgs::default_instance_ = new FullSweepArgs();
@@ -1980,7 +1979,6 @@ void QuantitatedChromatogram::Swap(QuantitatedChromatogram* other) {
 
 #ifndef _MSC_VER
 const int ConvertedSample::kIdFieldNumber;
-const int ConvertedSample::kNameFieldNumber;
 const int ConvertedSample::kUniqueIdFieldNumber;
 const int ConvertedSample::kConvertedChromatogramsFieldNumber;
 #endif  // !_MSC_VER
@@ -2002,7 +2000,6 @@ ConvertedSample::ConvertedSample(const ConvertedSample& from)
 void ConvertedSample::SharedCtor() {
   _cached_size_ = 0;
   id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
-  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   unique_id_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
@@ -2014,9 +2011,6 @@ ConvertedSample::~ConvertedSample() {
 void ConvertedSample::SharedDtor() {
   if (id_ != &::google::protobuf::internal::kEmptyString) {
     delete id_;
-  }
-  if (name_ != &::google::protobuf::internal::kEmptyString) {
-    delete name_;
   }
   if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
     delete unique_id_;
@@ -2052,11 +2046,6 @@ void ConvertedSample::Clear() {
         id_->clear();
       }
     }
-    if (has_name()) {
-      if (name_ != &::google::protobuf::internal::kEmptyString) {
-        name_->clear();
-      }
-    }
     if (has_unique_id()) {
       if (unique_id_ != &::google::protobuf::internal::kEmptyString) {
         unique_id_->clear();
@@ -2086,29 +2075,12 @@ bool ConvertedSample::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(18)) goto parse_name;
+        if (input->ExpectTag(18)) goto parse_unique_id;
         break;
       }
       
-      // required string name = 2;
+      // required string unique_id = 2;
       case 2: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
-         parse_name:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-            this->name().data(), this->name().length(),
-            ::google::protobuf::internal::WireFormat::PARSE);
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(26)) goto parse_unique_id;
-        break;
-      }
-      
-      // required string unique_id = 3;
-      case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_unique_id:
@@ -2120,12 +2092,12 @@ bool ConvertedSample::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(34)) goto parse_convertedChromatograms;
+        if (input->ExpectTag(26)) goto parse_convertedChromatograms;
         break;
       }
       
-      // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
-      case 4: {
+      // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
+      case 3: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_convertedChromatograms:
@@ -2134,7 +2106,7 @@ bool ConvertedSample::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(34)) goto parse_convertedChromatograms;
+        if (input->ExpectTag(26)) goto parse_convertedChromatograms;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -2166,28 +2138,19 @@ void ConvertedSample::SerializeWithCachedSizes(
       1, this->id(), output);
   }
   
-  // required string name = 2;
-  if (has_name()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    ::google::protobuf::internal::WireFormatLite::WriteString(
-      2, this->name(), output);
-  }
-  
-  // required string unique_id = 3;
+  // required string unique_id = 2;
   if (has_unique_id()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->unique_id().data(), this->unique_id().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     ::google::protobuf::internal::WireFormatLite::WriteString(
-      3, this->unique_id(), output);
+      2, this->unique_id(), output);
   }
   
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
   for (int i = 0; i < this->convertedchromatograms_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->convertedchromatograms(i), output);
+      3, this->convertedchromatograms(i), output);
   }
   
   if (!unknown_fields().empty()) {
@@ -2208,31 +2171,21 @@ void ConvertedSample::SerializeWithCachedSizes(
         1, this->id(), target);
   }
   
-  // required string name = 2;
-  if (has_name()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8String(
-      this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE);
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
-  }
-  
-  // required string unique_id = 3;
+  // required string unique_id = 2;
   if (has_unique_id()) {
     ::google::protobuf::internal::WireFormat::VerifyUTF8String(
       this->unique_id().data(), this->unique_id().length(),
       ::google::protobuf::internal::WireFormat::SERIALIZE);
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->unique_id(), target);
+        2, this->unique_id(), target);
   }
   
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
   for (int i = 0; i < this->convertedchromatograms_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        4, this->convertedchromatograms(i), target);
+        3, this->convertedchromatograms(i), target);
   }
   
   if (!unknown_fields().empty()) {
@@ -2253,14 +2206,7 @@ int ConvertedSample::ByteSize() const {
           this->id());
     }
     
-    // required string name = 2;
-    if (has_name()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->name());
-    }
-    
-    // required string unique_id = 3;
+    // required string unique_id = 2;
     if (has_unique_id()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::StringSize(
@@ -2268,7 +2214,7 @@ int ConvertedSample::ByteSize() const {
     }
     
   }
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 4;
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
   total_size += 1 * this->convertedchromatograms_size();
   for (int i = 0; i < this->convertedchromatograms_size(); i++) {
     total_size +=
@@ -2306,9 +2252,6 @@ void ConvertedSample::MergeFrom(const ConvertedSample& from) {
     if (from.has_id()) {
       set_id(from.id());
     }
-    if (from.has_name()) {
-      set_name(from.name());
-    }
     if (from.has_unique_id()) {
       set_unique_id(from.unique_id());
     }
@@ -2329,7 +2272,7 @@ void ConvertedSample::CopyFrom(const ConvertedSample& from) {
 }
 
 bool ConvertedSample::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
   
   for (int i = 0; i < convertedchromatograms_size(); i++) {
     if (!this->convertedchromatograms(i).IsInitialized()) return false;
@@ -2340,7 +2283,6 @@ bool ConvertedSample::IsInitialized() const {
 void ConvertedSample::Swap(ConvertedSample* other) {
   if (other != this) {
     std::swap(id_, other->id_);
-    std::swap(name_, other->name_);
     std::swap(unique_id_, other->unique_id_);
     convertedchromatograms_.Swap(&other->convertedchromatograms_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
