@@ -16,8 +16,10 @@ module Indigo
 
       ac = Pb::AssayConfiguration.new(name: 'fake')
       msg = Pb::FullSweepArgs.new(assayConfig: ac, convertedSamples: samps)
-      result = Pb::FullSweepResult.decode(Indigo::Compute::Native.full_sweep(msg.encode, trace_times, trace_intensities))
-      puts "got result: #{result}"
+      encoded_result, full_times, plot_times, raw, smooth, global_baseline, plot =
+          Indigo::Compute::Native.full_sweep(msg.encode.to_s, trace_times, trace_intensities)
+      result = Pb::FullSweepResult.decode(encoded_result)
+      puts "got result!"
     end
 
     def self.converted_samples_to_pbs(converted_samples)
@@ -29,8 +31,8 @@ module Indigo
         pbs = converted_sample_to_pb(cs)
         pbs.convertedChromatograms = cs.converted_chromatograms.map do |cc|
           pbc = converted_chromatogram_to_pb(cc)
-          trace_times[cc.id.to_s] = cc.converted_trace.times
-          trace_intensities[cc.id.to_s] = cc.converted_trace.intensities
+          trace_times[cc.id.to_s] = cc.converted_trace.times.data
+          trace_intensities[cc.id.to_s] = cc.converted_trace.intensities.data
           pbc
         end
         pbs

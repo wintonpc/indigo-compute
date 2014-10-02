@@ -1,6 +1,7 @@
 #ifndef ruby_compute_h__
 #define ruby_compute_h__
 
+#include <stdio.h>
 #include <string>
 #include <ruby.h>
 #include <stdarg.h>
@@ -11,8 +12,8 @@
     return encode(func(decode<argType>(args)));         \
   }
 
-#define INSTALL(module, rubyName, func)                                 \
-  rb_define_singleton_method(module, rubyName, (VALUE(*)(ANYARGS))func##_ruby_wrapper, 1)
+#define INSTALL(module, rubyName, func, arity)                                \
+  rb_define_singleton_method(module, rubyName, (VALUE(*)(ANYARGS))func##_ruby_wrapper, arity)
 
 template<class T>
 inline T decode(VALUE args) {
@@ -31,7 +32,7 @@ inline VALUE encode(T pbResult) {
   return rb_str_new(resultBuf, resultStr.size());
 }
 
-VALUE define_module(const char *longName) {
+inline VALUE define_module(const char *longName) {
   char names[1024];
   strcpy(names, longName);
   char *name;
@@ -43,6 +44,35 @@ VALUE define_module(const char *longName) {
   } while (NULL != (name = strtok(NULL, ":")));
 
   return parent;
+}
+
+inline int co_hash_to_map(VALUE key, VALUE val, VALUE map) {
+  //printf("co_hash_to_map(%s)\n", RSTRING_PTR(key));
+  int byteCount = RSTRING_LEN(val);
+  char *bytes = RSTRING_PTR(val);
+  //printf("  buffer len: %d\n", byteCount);
+  double *doubles = (double*)bytes;
+  int doubleCount = byteCount / 8;
+  (*((FloatsMap*)map))[std::string(RSTRING_PTR(key))] = Floats(doubles, doubles + doubleCount);
+  printf("  map[\"%s\"] = doubles(%d)\n", RSTRING_PTR(key), doubleCount);
+  return ST_CONTINUE;
+}
+
+inline FloatsMap hash_to_map(const VALUE& hash) {
+  FloatsMap map;
+  printf("rb_hash_foreach\n");
+  rb_hash_foreach(hash, (int(*)(ANYARGS))co_hash_to_map, (VALUE)&map);
+  printf("rb_hash_foreach: done\n");
+  return map;
+}
+
+inline VALUE map_to_hash(FloatsMap map) {
+  VALUE hash = rb_hash_new();
+  for (auto& pair : map) {
+    rb_hash_aset(hash, rb_str_new2(pair.first.c_str()),
+                 rb_str_new((const char*)pair.second.data(), pair.second.size() * 8));
+  }
+  return hash;
 }
 
 #endif // ruby_compute_h__

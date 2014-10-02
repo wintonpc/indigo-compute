@@ -3,3 +3,5 @@ ext/indigo_compute/compute.pb.cc
 tmp
 *.so
 *.gem
+\#*\#
+.\#*
