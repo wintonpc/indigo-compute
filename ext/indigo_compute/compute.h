@@ -4,9 +4,10 @@
 #include <map>
 #include <vector>
 #include <string>
+#include "rovec.h"
 #include "ib/ffi/compute/v3_3_0/compute.pb.h"
 
-typedef std::vector<double> Floats;
+typedef rovec<double> Floats;
 typedef std::map<std::string, Floats> FloatsMap;
 
 ib::ffi::compute::v3_3_0::FullSweepResult

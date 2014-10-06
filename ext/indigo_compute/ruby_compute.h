@@ -53,8 +53,8 @@ inline int co_hash_to_map(VALUE key, VALUE val, VALUE map) {
   //printf("  buffer len: %d\n", byteCount);
   double *doubles = (double*)bytes;
   int doubleCount = byteCount / 8;
-  (*((FloatsMap*)map))[std::string(RSTRING_PTR(key))] = Floats(doubles, doubles + doubleCount);
-  printf("  map[\"%s\"] = doubles(%d)\n", RSTRING_PTR(key), doubleCount);
+  (*((FloatsMap*)map))[std::string(RSTRING_PTR(key))] = Floats(doubles, doubleCount);
+  //printf("  map[\"%s\"] = doubles(%d)\n", RSTRING_PTR(key), doubleCount);
   return ST_CONTINUE;
 }
 
