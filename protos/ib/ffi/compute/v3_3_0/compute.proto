@@ -4,12 +4,12 @@ package ib.ffi.compute.v3_3_0;
 // full sweep
 
 message FullSweepArgs {
-  required AssayConfiguration assayConfig = 1;
-  repeated ConvertedSample convertedSamples = 2;
+  required AssayConfiguration assay_config = 1;
+  repeated ConvertedSample converted_samples = 2;
 }
 
 message FullSweepResult {
-  repeated QuantitatedSample quantitatedSamples = 1;
+  repeated QuantitatedSample quantitated_samples = 1;
 }
 
 
@@ -26,13 +26,13 @@ message QuantitatedSample {
   required string id = 1;
   required string name = 2;
   required string unique_id = 3;
-  repeated QuantitatedCompound quantitatedCompounds = 4;
+  repeated QuantitatedCompound quantitated_compounds = 4;
 }
 
 message QuantitatedCompound {
   required string id = 1;
   required string name = 2;
-  repeated QuantitatedChromatogram quantitatedChromatograms = 3;
+  repeated QuantitatedChromatogram quantitated_chromatograms = 3;
 }
 
 message QuantitatedChromatogram {
@@ -46,7 +46,7 @@ message QuantitatedChromatogram {
 message ConvertedSample {
   required string id = 1;
   required string unique_id = 2;
-  repeated ConvertedChromatogram convertedChromatograms = 3;
+  repeated ConvertedChromatogram converted_chromatograms = 3;
 }
 
 message ConvertedChromatogram {
@@ -54,5 +54,5 @@ message ConvertedChromatogram {
   optional double precursor = 2;
   required double product = 3;
   required string polarity = 4;
-  optional double collisionEnergy = 5;
+  optional double collision_energy = 5;
 }

@@ -39,12 +39,12 @@ module Ib
         end
 
         class FullSweepArgs
-          required :assayConfig, AssayConfiguration, 1
-          repeated :convertedSamples, ConvertedSample, 2
+          required :assay_config, AssayConfiguration, 1
+          repeated :converted_samples, ConvertedSample, 2
         end
 
         class FullSweepResult
-          repeated :quantitatedSamples, QuantitatedSample, 1
+          repeated :quantitated_samples, QuantitatedSample, 1
         end
 
         class AssayConfiguration
@@ -55,13 +55,13 @@ module Ib
           required :id, :string, 1
           required :name, :string, 2
           required :unique_id, :string, 3
-          repeated :quantitatedCompounds, QuantitatedCompound, 4
+          repeated :quantitated_compounds, QuantitatedCompound, 4
         end
 
         class QuantitatedCompound
           required :id, :string, 1
           required :name, :string, 2
-          repeated :quantitatedChromatograms, QuantitatedChromatogram, 3
+          repeated :quantitated_chromatograms, QuantitatedChromatogram, 3
         end
 
         class QuantitatedChromatogram
@@ -72,7 +72,7 @@ module Ib
         class ConvertedSample
           required :id, :string, 1
           required :unique_id, :string, 2
-          repeated :convertedChromatograms, ConvertedChromatogram, 3
+          repeated :converted_chromatograms, ConvertedChromatogram, 3
         end
 
         class ConvertedChromatogram
@@ -80,7 +80,7 @@ module Ib
           optional :precursor, :double, 2
           required :product, :double, 3
           required :polarity, :string, 4
-          optional :collisionEnergy, :double, 5
+          optional :collision_energy, :double, 5
         end
       end
     end

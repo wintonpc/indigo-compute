@@ -15,11 +15,12 @@ module Indigo
       samps, trace_times, trace_intensities = converted_samples_to_pbs(ConvertedSample.where(batch_id: batch_id))
 
       ac = Pb::AssayConfiguration.new(name: 'fake')
-      msg = Pb::FullSweepArgs.new(assayConfig: ac, convertedSamples: samps)
+      msg = Pb::FullSweepArgs.new(assay_config: ac, converted_samples: samps)
       encoded_result, full_times, plot_times, raw, smooth, global_baseline, plot =
           Indigo::Compute::Native.full_sweep(msg.encode.to_s, trace_times, trace_intensities)
       result = Pb::FullSweepResult.decode(encoded_result)
       puts "got result!"
+      dump_result(result)
     end
 
     def self.converted_samples_to_pbs(converted_samples)
@@ -29,7 +30,7 @@ module Indigo
 
       samps = converted_samples.map do |cs|
         pbs = converted_sample_to_pb(cs)
-        pbs.convertedChromatograms = cs.converted_chromatograms.map do |cc|
+        pbs.converted_chromatograms = cs.converted_chromatograms.map do |cc|
           pbc = converted_chromatogram_to_pb(cc)
           trace_times[cc.id.to_s] = cc.converted_trace.times.data
           trace_intensities[cc.id.to_s] = cc.converted_trace.intensities.data
@@ -54,6 +55,19 @@ module Indigo
           polarity: c.polarity,
           collision_energy: c.collision_energy
       )
+    end
+
+    def self.dump_result(result)
+      qsamps = result.quantitated_samples || []
+      puts "QuantitatedSamples (#{qsamps.size})"
+      qsamps.each do |qs|
+        puts "  QuantSample #{qs.unique_id} (#{qs.id})"
+        qcomps = qs.quantitated_compounds || []
+        puts "    QuantitatedCompounds (#{qcomps.size})"
+        qcomps.each do |qcomp|
+          puts "      QuantCompound #{qcomp.name}"
+        end
+      end
     end
   end
 end

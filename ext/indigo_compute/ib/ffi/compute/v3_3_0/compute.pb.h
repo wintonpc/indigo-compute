@@ -100,35 +100,35 @@ class FullSweepArgs : public ::google::protobuf::Message {
   
   // accessors -------------------------------------------------------
   
-  // required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
-  inline bool has_assayconfig() const;
-  inline void clear_assayconfig();
+  // required .ib.ffi.compute.v3_3_0.AssayConfiguration assay_config = 1;
+  inline bool has_assay_config() const;
+  inline void clear_assay_config();
   static const int kAssayConfigFieldNumber = 1;
-  inline const ::ib::ffi::compute::v3_3_0::AssayConfiguration& assayconfig() const;
-  inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* mutable_assayconfig();
-  inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* release_assayconfig();
+  inline const ::ib::ffi::compute::v3_3_0::AssayConfiguration& assay_config() const;
+  inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* mutable_assay_config();
+  inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* release_assay_config();
   
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
-  inline int convertedsamples_size() const;
-  inline void clear_convertedsamples();
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedSample converted_samples = 2;
+  inline int converted_samples_size() const;
+  inline void clear_converted_samples();
   static const int kConvertedSamplesFieldNumber = 2;
-  inline const ::ib::ffi::compute::v3_3_0::ConvertedSample& convertedsamples(int index) const;
-  inline ::ib::ffi::compute::v3_3_0::ConvertedSample* mutable_convertedsamples(int index);
-  inline ::ib::ffi::compute::v3_3_0::ConvertedSample* add_convertedsamples();
+  inline const ::ib::ffi::compute::v3_3_0::ConvertedSample& converted_samples(int index) const;
+  inline ::ib::ffi::compute::v3_3_0::ConvertedSample* mutable_converted_samples(int index);
+  inline ::ib::ffi::compute::v3_3_0::ConvertedSample* add_converted_samples();
   inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample >&
-      convertedsamples() const;
+      converted_samples() const;
   inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample >*
-      mutable_convertedsamples();
+      mutable_converted_samples();
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.FullSweepArgs)
  private:
-  inline void set_has_assayconfig();
-  inline void clear_has_assayconfig();
+  inline void set_has_assay_config();
+  inline void clear_has_assay_config();
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
-  ::ib::ffi::compute::v3_3_0::AssayConfiguration* assayconfig_;
-  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample > convertedsamples_;
+  ::ib::ffi::compute::v3_3_0::AssayConfiguration* assay_config_;
+  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample > converted_samples_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
@@ -196,24 +196,24 @@ class FullSweepResult : public ::google::protobuf::Message {
   
   // accessors -------------------------------------------------------
   
-  // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
-  inline int quantitatedsamples_size() const;
-  inline void clear_quantitatedsamples();
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitated_samples = 1;
+  inline int quantitated_samples_size() const;
+  inline void clear_quantitated_samples();
   static const int kQuantitatedSamplesFieldNumber = 1;
-  inline const ::ib::ffi::compute::v3_3_0::QuantitatedSample& quantitatedsamples(int index) const;
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* mutable_quantitatedsamples(int index);
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* add_quantitatedsamples();
+  inline const ::ib::ffi::compute::v3_3_0::QuantitatedSample& quantitated_samples(int index) const;
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* mutable_quantitated_samples(int index);
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* add_quantitated_samples();
   inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample >&
-      quantitatedsamples() const;
+      quantitated_samples() const;
   inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample >*
-      mutable_quantitatedsamples();
+      mutable_quantitated_samples();
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.FullSweepResult)
  private:
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
-  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample > quantitatedsamples_;
+  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample > quantitated_samples_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
@@ -400,17 +400,17 @@ class QuantitatedSample : public ::google::protobuf::Message {
   inline ::std::string* mutable_unique_id();
   inline ::std::string* release_unique_id();
   
-  // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
-  inline int quantitatedcompounds_size() const;
-  inline void clear_quantitatedcompounds();
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitated_compounds = 4;
+  inline int quantitated_compounds_size() const;
+  inline void clear_quantitated_compounds();
   static const int kQuantitatedCompoundsFieldNumber = 4;
-  inline const ::ib::ffi::compute::v3_3_0::QuantitatedCompound& quantitatedcompounds(int index) const;
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* mutable_quantitatedcompounds(int index);
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* add_quantitatedcompounds();
+  inline const ::ib::ffi::compute::v3_3_0::QuantitatedCompound& quantitated_compounds(int index) const;
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* mutable_quantitated_compounds(int index);
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* add_quantitated_compounds();
   inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound >&
-      quantitatedcompounds() const;
+      quantitated_compounds() const;
   inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound >*
-      mutable_quantitatedcompounds();
+      mutable_quantitated_compounds();
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.QuantitatedSample)
  private:
@@ -426,7 +426,7 @@ class QuantitatedSample : public ::google::protobuf::Message {
   ::std::string* id_;
   ::std::string* name_;
   ::std::string* unique_id_;
-  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound > quantitatedcompounds_;
+  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound > quantitated_compounds_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(4 + 31) / 32];
@@ -516,17 +516,17 @@ class QuantitatedCompound : public ::google::protobuf::Message {
   inline ::std::string* mutable_name();
   inline ::std::string* release_name();
   
-  // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
-  inline int quantitatedchromatograms_size() const;
-  inline void clear_quantitatedchromatograms();
+  // repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitated_chromatograms = 3;
+  inline int quantitated_chromatograms_size() const;
+  inline void clear_quantitated_chromatograms();
   static const int kQuantitatedChromatogramsFieldNumber = 3;
-  inline const ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram& quantitatedchromatograms(int index) const;
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* mutable_quantitatedchromatograms(int index);
-  inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* add_quantitatedchromatograms();
+  inline const ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram& quantitated_chromatograms(int index) const;
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* mutable_quantitated_chromatograms(int index);
+  inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* add_quantitated_chromatograms();
   inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram >&
-      quantitatedchromatograms() const;
+      quantitated_chromatograms() const;
   inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram >*
-      mutable_quantitatedchromatograms();
+      mutable_quantitated_chromatograms();
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.QuantitatedCompound)
  private:
@@ -539,7 +539,7 @@ class QuantitatedCompound : public ::google::protobuf::Message {
   
   ::std::string* id_;
   ::std::string* name_;
-  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram > quantitatedchromatograms_;
+  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram > quantitated_chromatograms_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
@@ -729,17 +729,17 @@ class ConvertedSample : public ::google::protobuf::Message {
   inline ::std::string* mutable_unique_id();
   inline ::std::string* release_unique_id();
   
-  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
-  inline int convertedchromatograms_size() const;
-  inline void clear_convertedchromatograms();
+  // repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram converted_chromatograms = 3;
+  inline int converted_chromatograms_size() const;
+  inline void clear_converted_chromatograms();
   static const int kConvertedChromatogramsFieldNumber = 3;
-  inline const ::ib::ffi::compute::v3_3_0::ConvertedChromatogram& convertedchromatograms(int index) const;
-  inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* mutable_convertedchromatograms(int index);
-  inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* add_convertedchromatograms();
+  inline const ::ib::ffi::compute::v3_3_0::ConvertedChromatogram& converted_chromatograms(int index) const;
+  inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* mutable_converted_chromatograms(int index);
+  inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* add_converted_chromatograms();
   inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram >&
-      convertedchromatograms() const;
+      converted_chromatograms() const;
   inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram >*
-      mutable_convertedchromatograms();
+      mutable_converted_chromatograms();
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.ConvertedSample)
  private:
@@ -752,7 +752,7 @@ class ConvertedSample : public ::google::protobuf::Message {
   
   ::std::string* id_;
   ::std::string* unique_id_;
-  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram > convertedchromatograms_;
+  ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram > converted_chromatograms_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
@@ -856,12 +856,12 @@ class ConvertedChromatogram : public ::google::protobuf::Message {
   inline ::std::string* mutable_polarity();
   inline ::std::string* release_polarity();
   
-  // optional double collisionEnergy = 5;
-  inline bool has_collisionenergy() const;
-  inline void clear_collisionenergy();
+  // optional double collision_energy = 5;
+  inline bool has_collision_energy() const;
+  inline void clear_collision_energy();
   static const int kCollisionEnergyFieldNumber = 5;
-  inline double collisionenergy() const;
-  inline void set_collisionenergy(double value);
+  inline double collision_energy() const;
+  inline void set_collision_energy(double value);
   
   // @@protoc_insertion_point(class_scope:ib.ffi.compute.v3_3_0.ConvertedChromatogram)
  private:
@@ -873,8 +873,8 @@ class ConvertedChromatogram : public ::google::protobuf::Message {
   inline void clear_has_product();
   inline void set_has_polarity();
   inline void clear_has_polarity();
-  inline void set_has_collisionenergy();
-  inline void clear_has_collisionenergy();
+  inline void set_has_collision_energy();
+  inline void clear_has_collision_energy();
   
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
   
@@ -882,7 +882,7 @@ class ConvertedChromatogram : public ::google::protobuf::Message {
   double precursor_;
   double product_;
   ::std::string* polarity_;
-  double collisionenergy_;
+  double collision_energy_;
   
   mutable int _cached_size_;
   ::google::protobuf::uint32 _has_bits_[(5 + 31) / 32];
@@ -901,87 +901,87 @@ class ConvertedChromatogram : public ::google::protobuf::Message {
 
 // FullSweepArgs
 
-// required .ib.ffi.compute.v3_3_0.AssayConfiguration assayConfig = 1;
-inline bool FullSweepArgs::has_assayconfig() const {
+// required .ib.ffi.compute.v3_3_0.AssayConfiguration assay_config = 1;
+inline bool FullSweepArgs::has_assay_config() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void FullSweepArgs::set_has_assayconfig() {
+inline void FullSweepArgs::set_has_assay_config() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void FullSweepArgs::clear_has_assayconfig() {
+inline void FullSweepArgs::clear_has_assay_config() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void FullSweepArgs::clear_assayconfig() {
-  if (assayconfig_ != NULL) assayconfig_->::ib::ffi::compute::v3_3_0::AssayConfiguration::Clear();
-  clear_has_assayconfig();
+inline void FullSweepArgs::clear_assay_config() {
+  if (assay_config_ != NULL) assay_config_->::ib::ffi::compute::v3_3_0::AssayConfiguration::Clear();
+  clear_has_assay_config();
 }
-inline const ::ib::ffi::compute::v3_3_0::AssayConfiguration& FullSweepArgs::assayconfig() const {
-  return assayconfig_ != NULL ? *assayconfig_ : *default_instance_->assayconfig_;
+inline const ::ib::ffi::compute::v3_3_0::AssayConfiguration& FullSweepArgs::assay_config() const {
+  return assay_config_ != NULL ? *assay_config_ : *default_instance_->assay_config_;
 }
-inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* FullSweepArgs::mutable_assayconfig() {
-  set_has_assayconfig();
-  if (assayconfig_ == NULL) assayconfig_ = new ::ib::ffi::compute::v3_3_0::AssayConfiguration;
-  return assayconfig_;
+inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* FullSweepArgs::mutable_assay_config() {
+  set_has_assay_config();
+  if (assay_config_ == NULL) assay_config_ = new ::ib::ffi::compute::v3_3_0::AssayConfiguration;
+  return assay_config_;
 }
-inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* FullSweepArgs::release_assayconfig() {
-  clear_has_assayconfig();
-  ::ib::ffi::compute::v3_3_0::AssayConfiguration* temp = assayconfig_;
-  assayconfig_ = NULL;
+inline ::ib::ffi::compute::v3_3_0::AssayConfiguration* FullSweepArgs::release_assay_config() {
+  clear_has_assay_config();
+  ::ib::ffi::compute::v3_3_0::AssayConfiguration* temp = assay_config_;
+  assay_config_ = NULL;
   return temp;
 }
 
-// repeated .ib.ffi.compute.v3_3_0.ConvertedSample convertedSamples = 2;
-inline int FullSweepArgs::convertedsamples_size() const {
-  return convertedsamples_.size();
+// repeated .ib.ffi.compute.v3_3_0.ConvertedSample converted_samples = 2;
+inline int FullSweepArgs::converted_samples_size() const {
+  return converted_samples_.size();
 }
-inline void FullSweepArgs::clear_convertedsamples() {
-  convertedsamples_.Clear();
+inline void FullSweepArgs::clear_converted_samples() {
+  converted_samples_.Clear();
 }
-inline const ::ib::ffi::compute::v3_3_0::ConvertedSample& FullSweepArgs::convertedsamples(int index) const {
-  return convertedsamples_.Get(index);
+inline const ::ib::ffi::compute::v3_3_0::ConvertedSample& FullSweepArgs::converted_samples(int index) const {
+  return converted_samples_.Get(index);
 }
-inline ::ib::ffi::compute::v3_3_0::ConvertedSample* FullSweepArgs::mutable_convertedsamples(int index) {
-  return convertedsamples_.Mutable(index);
+inline ::ib::ffi::compute::v3_3_0::ConvertedSample* FullSweepArgs::mutable_converted_samples(int index) {
+  return converted_samples_.Mutable(index);
 }
-inline ::ib::ffi::compute::v3_3_0::ConvertedSample* FullSweepArgs::add_convertedsamples() {
-  return convertedsamples_.Add();
+inline ::ib::ffi::compute::v3_3_0::ConvertedSample* FullSweepArgs::add_converted_samples() {
+  return converted_samples_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample >&
-FullSweepArgs::convertedsamples() const {
-  return convertedsamples_;
+FullSweepArgs::converted_samples() const {
+  return converted_samples_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedSample >*
-FullSweepArgs::mutable_convertedsamples() {
-  return &convertedsamples_;
+FullSweepArgs::mutable_converted_samples() {
+  return &converted_samples_;
 }
 
 // -------------------------------------------------------------------
 
 // FullSweepResult
 
-// repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitatedSamples = 1;
-inline int FullSweepResult::quantitatedsamples_size() const {
-  return quantitatedsamples_.size();
+// repeated .ib.ffi.compute.v3_3_0.QuantitatedSample quantitated_samples = 1;
+inline int FullSweepResult::quantitated_samples_size() const {
+  return quantitated_samples_.size();
 }
-inline void FullSweepResult::clear_quantitatedsamples() {
-  quantitatedsamples_.Clear();
+inline void FullSweepResult::clear_quantitated_samples() {
+  quantitated_samples_.Clear();
 }
-inline const ::ib::ffi::compute::v3_3_0::QuantitatedSample& FullSweepResult::quantitatedsamples(int index) const {
-  return quantitatedsamples_.Get(index);
+inline const ::ib::ffi::compute::v3_3_0::QuantitatedSample& FullSweepResult::quantitated_samples(int index) const {
+  return quantitated_samples_.Get(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* FullSweepResult::mutable_quantitatedsamples(int index) {
-  return quantitatedsamples_.Mutable(index);
+inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* FullSweepResult::mutable_quantitated_samples(int index) {
+  return quantitated_samples_.Mutable(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* FullSweepResult::add_quantitatedsamples() {
-  return quantitatedsamples_.Add();
+inline ::ib::ffi::compute::v3_3_0::QuantitatedSample* FullSweepResult::add_quantitated_samples() {
+  return quantitated_samples_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample >&
-FullSweepResult::quantitatedsamples() const {
-  return quantitatedsamples_;
+FullSweepResult::quantitated_samples() const {
+  return quantitated_samples_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedSample >*
-FullSweepResult::mutable_quantitatedsamples() {
-  return &quantitatedsamples_;
+FullSweepResult::mutable_quantitated_samples() {
+  return &quantitated_samples_;
 }
 
 // -------------------------------------------------------------------
@@ -1224,29 +1224,29 @@ inline ::std::string* QuantitatedSample::release_unique_id() {
   }
 }
 
-// repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitatedCompounds = 4;
-inline int QuantitatedSample::quantitatedcompounds_size() const {
-  return quantitatedcompounds_.size();
+// repeated .ib.ffi.compute.v3_3_0.QuantitatedCompound quantitated_compounds = 4;
+inline int QuantitatedSample::quantitated_compounds_size() const {
+  return quantitated_compounds_.size();
 }
-inline void QuantitatedSample::clear_quantitatedcompounds() {
-  quantitatedcompounds_.Clear();
+inline void QuantitatedSample::clear_quantitated_compounds() {
+  quantitated_compounds_.Clear();
 }
-inline const ::ib::ffi::compute::v3_3_0::QuantitatedCompound& QuantitatedSample::quantitatedcompounds(int index) const {
-  return quantitatedcompounds_.Get(index);
+inline const ::ib::ffi::compute::v3_3_0::QuantitatedCompound& QuantitatedSample::quantitated_compounds(int index) const {
+  return quantitated_compounds_.Get(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* QuantitatedSample::mutable_quantitatedcompounds(int index) {
-  return quantitatedcompounds_.Mutable(index);
+inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* QuantitatedSample::mutable_quantitated_compounds(int index) {
+  return quantitated_compounds_.Mutable(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* QuantitatedSample::add_quantitatedcompounds() {
-  return quantitatedcompounds_.Add();
+inline ::ib::ffi::compute::v3_3_0::QuantitatedCompound* QuantitatedSample::add_quantitated_compounds() {
+  return quantitated_compounds_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound >&
-QuantitatedSample::quantitatedcompounds() const {
-  return quantitatedcompounds_;
+QuantitatedSample::quantitated_compounds() const {
+  return quantitated_compounds_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedCompound >*
-QuantitatedSample::mutable_quantitatedcompounds() {
-  return &quantitatedcompounds_;
+QuantitatedSample::mutable_quantitated_compounds() {
+  return &quantitated_compounds_;
 }
 
 // -------------------------------------------------------------------
@@ -1369,29 +1369,29 @@ inline ::std::string* QuantitatedCompound::release_name() {
   }
 }
 
-// repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitatedChromatograms = 3;
-inline int QuantitatedCompound::quantitatedchromatograms_size() const {
-  return quantitatedchromatograms_.size();
+// repeated .ib.ffi.compute.v3_3_0.QuantitatedChromatogram quantitated_chromatograms = 3;
+inline int QuantitatedCompound::quantitated_chromatograms_size() const {
+  return quantitated_chromatograms_.size();
 }
-inline void QuantitatedCompound::clear_quantitatedchromatograms() {
-  quantitatedchromatograms_.Clear();
+inline void QuantitatedCompound::clear_quantitated_chromatograms() {
+  quantitated_chromatograms_.Clear();
 }
-inline const ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram& QuantitatedCompound::quantitatedchromatograms(int index) const {
-  return quantitatedchromatograms_.Get(index);
+inline const ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram& QuantitatedCompound::quantitated_chromatograms(int index) const {
+  return quantitated_chromatograms_.Get(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* QuantitatedCompound::mutable_quantitatedchromatograms(int index) {
-  return quantitatedchromatograms_.Mutable(index);
+inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* QuantitatedCompound::mutable_quantitated_chromatograms(int index) {
+  return quantitated_chromatograms_.Mutable(index);
 }
-inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* QuantitatedCompound::add_quantitatedchromatograms() {
-  return quantitatedchromatograms_.Add();
+inline ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram* QuantitatedCompound::add_quantitated_chromatograms() {
+  return quantitated_chromatograms_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram >&
-QuantitatedCompound::quantitatedchromatograms() const {
-  return quantitatedchromatograms_;
+QuantitatedCompound::quantitated_chromatograms() const {
+  return quantitated_chromatograms_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::QuantitatedChromatogram >*
-QuantitatedCompound::mutable_quantitatedchromatograms() {
-  return &quantitatedchromatograms_;
+QuantitatedCompound::mutable_quantitated_chromatograms() {
+  return &quantitated_chromatograms_;
 }
 
 // -------------------------------------------------------------------
@@ -1634,29 +1634,29 @@ inline ::std::string* ConvertedSample::release_unique_id() {
   }
 }
 
-// repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram convertedChromatograms = 3;
-inline int ConvertedSample::convertedchromatograms_size() const {
-  return convertedchromatograms_.size();
+// repeated .ib.ffi.compute.v3_3_0.ConvertedChromatogram converted_chromatograms = 3;
+inline int ConvertedSample::converted_chromatograms_size() const {
+  return converted_chromatograms_.size();
 }
-inline void ConvertedSample::clear_convertedchromatograms() {
-  convertedchromatograms_.Clear();
+inline void ConvertedSample::clear_converted_chromatograms() {
+  converted_chromatograms_.Clear();
 }
-inline const ::ib::ffi::compute::v3_3_0::ConvertedChromatogram& ConvertedSample::convertedchromatograms(int index) const {
-  return convertedchromatograms_.Get(index);
+inline const ::ib::ffi::compute::v3_3_0::ConvertedChromatogram& ConvertedSample::converted_chromatograms(int index) const {
+  return converted_chromatograms_.Get(index);
 }
-inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* ConvertedSample::mutable_convertedchromatograms(int index) {
-  return convertedchromatograms_.Mutable(index);
+inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* ConvertedSample::mutable_converted_chromatograms(int index) {
+  return converted_chromatograms_.Mutable(index);
 }
-inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* ConvertedSample::add_convertedchromatograms() {
-  return convertedchromatograms_.Add();
+inline ::ib::ffi::compute::v3_3_0::ConvertedChromatogram* ConvertedSample::add_converted_chromatograms() {
+  return converted_chromatograms_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram >&
-ConvertedSample::convertedchromatograms() const {
-  return convertedchromatograms_;
+ConvertedSample::converted_chromatograms() const {
+  return converted_chromatograms_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::ib::ffi::compute::v3_3_0::ConvertedChromatogram >*
-ConvertedSample::mutable_convertedchromatograms() {
-  return &convertedchromatograms_;
+ConvertedSample::mutable_converted_chromatograms() {
+  return &converted_chromatograms_;
 }
 
 // -------------------------------------------------------------------
@@ -1823,26 +1823,26 @@ inline ::std::string* ConvertedChromatogram::release_polarity() {
   }
 }
 
-// optional double collisionEnergy = 5;
-inline bool ConvertedChromatogram::has_collisionenergy() const {
+// optional double collision_energy = 5;
+inline bool ConvertedChromatogram::has_collision_energy() const {
   return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void ConvertedChromatogram::set_has_collisionenergy() {
+inline void ConvertedChromatogram::set_has_collision_energy() {
   _has_bits_[0] |= 0x00000010u;
 }
-inline void ConvertedChromatogram::clear_has_collisionenergy() {
+inline void ConvertedChromatogram::clear_has_collision_energy() {
   _has_bits_[0] &= ~0x00000010u;
 }
-inline void ConvertedChromatogram::clear_collisionenergy() {
-  collisionenergy_ = 0;
-  clear_has_collisionenergy();
+inline void ConvertedChromatogram::clear_collision_energy() {
+  collision_energy_ = 0;
+  clear_has_collision_energy();
 }
-inline double ConvertedChromatogram::collisionenergy() const {
-  return collisionenergy_;
+inline double ConvertedChromatogram::collision_energy() const {
+  return collision_energy_;
 }
-inline void ConvertedChromatogram::set_collisionenergy(double value) {
-  set_has_collisionenergy();
-  collisionenergy_ = value;
+inline void ConvertedChromatogram::set_collision_energy(double value) {
+  set_has_collision_energy();
+  collision_energy_ = value;
 }
 
 
