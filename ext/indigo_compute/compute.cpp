@@ -4,7 +4,7 @@
 using namespace std;
 using namespace ib::ffi::compute::v3_3_0;
 
-QuantitatedCompound convertedChromatogramToQuantitatedCompound(ConvertedChromatogram cc) {
+QuantitatedCompound convertedChromatogramToQuantitatedCompound(ConvertedChromatogram cc, Traces& quantTraces) {
   QuantitatedCompound qc;
   qc.set_id("");
   string name = "";
@@ -18,26 +18,24 @@ QuantitatedCompound convertedChromatogramToQuantitatedCompound(ConvertedChromato
   return qc;
 }
 
-QuantitatedSample convertedToQuantitatedSample(ConvertedSample cs) {
+QuantitatedSample convertedToQuantitatedSample(ConvertedSample cs, Trace& quantTraces) {
   QuantitatedSample qs;
   qs.set_id(cs.id());
   qs.set_name("");
   qs.set_unique_id(cs.unique_id());
   for (ConvertedChromatogram cc : cs.converted_chromatograms())
-    *(qs.add_quantitated_compounds()) = convertedChromatogramToQuantitatedCompound(cc);
+    *(qs.add_quantitated_compounds()) = convertedChromatogramToQuantitatedCompound(cc, quantTraces);
   return qs;
 }
 
 FullSweepResult fullSweep(const FullSweepArgs& args, const FloatsMap& traceTimes, const FloatsMap& traceIntensities,
-                          // out params
-                          FloatsMap& fullTimes, FloatsMap& plotTimes, FloatsMap& raw,
-                          FloatsMap& smooth, FloatsMap& globalBaseline, FloatsMap& plot) {
+                          Traces& quantTraces) {
   
   printf("fullSweep got converted samples with %d total traces\n", (int)traceTimes.size());
 
   FullSweepResult result;
   for (ConvertedSample cs : args.converted_samples())
-    *(result.add_quantitated_samples()) = convertedToQuantitatedSample(cs);
+    *(result.add_quantitated_samples()) = convertedToQuantitatedSample(cs, quantTraces);
 
   return result;
 }
