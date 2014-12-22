@@ -10,7 +10,12 @@
 typedef rovec<double> Floats;
 typedef std::map<std::string, Floats> FloatsMap;
 
-struct Traces {
+struct RawTraces {
+  FloatsMap times;
+  FloatsMap intensities;
+};
+
+struct QuantTraces {
   FloatsMap fullTimes;
   FloatsMap plotTimes;
   FloatsMap raw;
@@ -20,9 +25,7 @@ struct Traces {
 };
 
 ib::ffi::compute::v3_3_0::FullSweepResult
-fullSweep(const ib::ffi::compute::v3_3_0::FullSweepArgs& args,
-          const FloatsMap& traceTimes, const FloatsMap& traceIntensities,
-          Traces& quantTraces);
+fullSweep(const ib::ffi::compute::v3_3_0::FullSweepArgs& args, const RawTraces& rawTraces, QuantTraces& quantTraces);
 
 
 #endif // compute_h__

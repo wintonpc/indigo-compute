@@ -69,8 +69,12 @@ inline FloatsMap hash_to_map(const VALUE& hash) {
 inline VALUE map_to_hash(FloatsMap map) {
   VALUE hash = rb_hash_new();
   for (auto& pair : map) {
-    rb_hash_aset(hash, rb_str_new2(pair.first.c_str()),
-                 rb_str_new((const char*)pair.second.data(), pair.second.size() * 8));
+    printf("map_to_hash %s, %d points\n", pair.first.c_str(), (int)pair.second.size());
+    for (double d : pair.second.data())
+      printf("%f\n", d);
+    VALUE val = rb_str_new((const char*)pair.second.data(), pair.second.size() * 8);
+    printf("got value\n");
+    rb_hash_aset(hash, rb_str_new2(pair.first.c_str()), val);
   }
   return hash;
 }
